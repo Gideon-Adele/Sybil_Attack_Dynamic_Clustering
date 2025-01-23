@@ -1,0 +1,1823 @@
+file 1592117 1737487595                                         
+version 2
+run Default-0-20250121-19:13:44-3653
+attr configname Default
+attr datetime 20250121-19:13:44
+attr experiment Default
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network highwayNetwork
+attr processid 3653
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param *.playgroundSizeX 2500m
+param *.playgroundSizeY 2500m
+param *.playgroundSizeZ 50m
+param *.annotations.draw true
+param *.manager.updateInterval 1s
+param *.manager.host "\"localhost\""
+param *.manager.port 9999
+param *.manager.autoShutdown true
+param *.manager.launchConfig "xmldoc(\"highway.launchd.xml\")"
+param *.rsu[0].mobility.x 2000
+param *.rsu[0].mobility.y 2000
+param *.rsu[0].mobility.z 3
+param *.rsu[*].applType "\"TraCIDemoRSU11p\""
+param *.rsu[*].appl.headerLength "80 bit"
+param *.rsu[*].appl.sendBeacons false
+param *.rsu[*].appl.dataOnSch false
+param *.rsu[*].appl.beaconInterval 1s
+param *.rsu[*].appl.beaconUserPriority 7
+param *.rsu[*].appl.dataUserPriority 5
+param *.rsu[*].nic.phy80211p.antennaOffsetZ "0 m"
+param *.connectionManager.sendDirect true
+param *.connectionManager.maxInterfDist 2600m
+param *.connectionManager.drawMaxIntfDist false
+param *.**.nic.mac1609_4.useServiceChannel false
+param *.**.nic.mac1609_4.txPower 20mW
+param *.**.nic.mac1609_4.bitrate 6Mbps
+param *.**.nic.phy80211p.minPowerLevel -110dBm
+param *.**.nic.phy80211p.useNoiseFloor true
+param *.**.nic.phy80211p.noiseFloor -98dBm
+param *.**.nic.phy80211p.decider "xmldoc(\"config.xml\")"
+param *.**.nic.phy80211p.analogueModels "xmldoc(\"config.xml\")"
+param *.**.nic.phy80211p.usePropagationDelay true
+param *.**.nic.phy80211p.antenna "xmldoc(\"antenna.xml\", \"/root/Antenna[@id='monopole']\")"
+param *.node[*].nic.phy80211p.antennaOffsetY "0 m"
+param *.node[*].nic.phy80211p.antennaOffsetZ "1.895 m"
+param *.node[*].applType "\"MyVeinsApp\""
+param *.node[*].appl.headerLength "80 bit"
+param *.node[*].appl.sendBeacons true
+param *.node[*].appl.dataOnSch false
+param *.node[*].appl.beaconInterval 1s
+param *.node[*].veinsmobility.x 0
+param *.node[*].veinsmobility.y 0
+param *.node[*].veinsmobility.z 0
+param *.node[*].veinsmobility.setHostSpeed false
+
+vector 0 highwayNetwork.node[0].veinsmobility posx ETV
+vector 1 highwayNetwork.node[0].veinsmobility posy ETV
+vector 2 highwayNetwork.node[0].veinsmobility speed ETV
+vector 3 highwayNetwork.node[0].veinsmobility acceleration ETV
+vector 4 highwayNetwork.node[0].veinsmobility co2emission ETV
+vector 5 highwayNetwork.node[1].veinsmobility posx ETV
+vector 6 highwayNetwork.node[1].veinsmobility posy ETV
+vector 7 highwayNetwork.node[1].veinsmobility speed ETV
+vector 8 highwayNetwork.node[1].veinsmobility acceleration ETV
+vector 9 highwayNetwork.node[1].veinsmobility co2emission ETV
+vector 10 highwayNetwork.node[2].veinsmobility posx ETV
+vector 11 highwayNetwork.node[2].veinsmobility posy ETV
+vector 12 highwayNetwork.node[3].veinsmobility posx ETV
+vector 13 highwayNetwork.node[3].veinsmobility posy ETV
+vector 14 highwayNetwork.node[2].veinsmobility speed ETV
+vector 15 highwayNetwork.node[2].veinsmobility acceleration ETV
+vector 16 highwayNetwork.node[2].veinsmobility co2emission ETV
+vector 17 highwayNetwork.node[3].veinsmobility speed ETV
+vector 18 highwayNetwork.node[4].veinsmobility posx ETV
+vector 19 highwayNetwork.node[4].veinsmobility posy ETV
+vector 20 highwayNetwork.node[3].veinsmobility acceleration ETV
+vector 21 highwayNetwork.node[3].veinsmobility co2emission ETV
+vector 22 highwayNetwork.node[4].veinsmobility speed ETV
+vector 23 highwayNetwork.node[5].veinsmobility posx ETV
+vector 24 highwayNetwork.node[5].veinsmobility posy ETV
+vector 25 highwayNetwork.node[4].veinsmobility acceleration ETV
+vector 26 highwayNetwork.node[4].veinsmobility co2emission ETV
+vector 27 highwayNetwork.node[6].veinsmobility posx ETV
+vector 28 highwayNetwork.node[6].veinsmobility posy ETV
+vector 29 highwayNetwork.node[7].veinsmobility posx ETV
+vector 30 highwayNetwork.node[7].veinsmobility posy ETV
+vector 31 highwayNetwork.node[5].veinsmobility speed ETV
+vector 32 highwayNetwork.node[5].veinsmobility acceleration ETV
+vector 33 highwayNetwork.node[5].veinsmobility co2emission ETV
+vector 34 highwayNetwork.node[6].veinsmobility speed ETV
+vector 35 highwayNetwork.node[7].veinsmobility speed ETV
+vector 36 highwayNetwork.node[6].veinsmobility acceleration ETV
+vector 37 highwayNetwork.node[6].veinsmobility co2emission ETV
+vector 38 highwayNetwork.node[7].veinsmobility acceleration ETV
+vector 39 highwayNetwork.node[7].veinsmobility co2emission ETV
+vector 40 highwayNetwork.node[8].veinsmobility posx ETV
+vector 41 highwayNetwork.node[8].veinsmobility posy ETV
+vector 42 highwayNetwork.node[9].veinsmobility posx ETV
+vector 43 highwayNetwork.node[9].veinsmobility posy ETV
+vector 44 highwayNetwork.node[10].veinsmobility posx ETV
+vector 45 highwayNetwork.node[10].veinsmobility posy ETV
+vector 46 highwayNetwork.node[8].veinsmobility speed ETV
+vector 47 highwayNetwork.node[9].veinsmobility speed ETV
+vector 48 highwayNetwork.node[8].veinsmobility acceleration ETV
+vector 49 highwayNetwork.node[8].veinsmobility co2emission ETV
+vector 50 highwayNetwork.node[9].veinsmobility acceleration ETV
+vector 51 highwayNetwork.node[9].veinsmobility co2emission ETV
+vector 52 highwayNetwork.node[10].veinsmobility speed ETV
+vector 53 highwayNetwork.node[11].veinsmobility posx ETV
+vector 54 highwayNetwork.node[11].veinsmobility posy ETV
+vector 55 highwayNetwork.node[12].veinsmobility posx ETV
+vector 56 highwayNetwork.node[12].veinsmobility posy ETV
+vector 57 highwayNetwork.node[10].veinsmobility acceleration ETV
+vector 58 highwayNetwork.node[10].veinsmobility co2emission ETV
+vector 59 highwayNetwork.node[11].veinsmobility speed ETV
+vector 60 highwayNetwork.node[12].veinsmobility speed ETV
+vector 61 highwayNetwork.node[13].veinsmobility posx ETV
+vector 62 highwayNetwork.node[13].veinsmobility posy ETV
+vector 63 highwayNetwork.node[11].veinsmobility acceleration ETV
+vector 64 highwayNetwork.node[11].veinsmobility co2emission ETV
+vector 65 highwayNetwork.node[12].veinsmobility acceleration ETV
+vector 66 highwayNetwork.node[12].veinsmobility co2emission ETV
+vector 67 highwayNetwork.node[14].veinsmobility posx ETV
+vector 68 highwayNetwork.node[14].veinsmobility posy ETV
+vector 69 highwayNetwork.node[15].veinsmobility posx ETV
+vector 70 highwayNetwork.node[15].veinsmobility posy ETV
+vector 71 highwayNetwork.node[13].veinsmobility speed ETV
+vector 72 highwayNetwork.node[13].veinsmobility acceleration ETV
+vector 73 highwayNetwork.node[13].veinsmobility co2emission ETV
+vector 74 highwayNetwork.node[14].veinsmobility speed ETV
+vector 75 highwayNetwork.node[15].veinsmobility speed ETV
+vector 76 highwayNetwork.node[14].veinsmobility acceleration ETV
+vector 77 highwayNetwork.node[14].veinsmobility co2emission ETV
+vector 78 highwayNetwork.node[15].veinsmobility acceleration ETV
+vector 79 highwayNetwork.node[15].veinsmobility co2emission ETV
+vector 80 highwayNetwork.node[16].veinsmobility posx ETV
+vector 81 highwayNetwork.node[16].veinsmobility posy ETV
+vector 82 highwayNetwork.node[16].veinsmobility speed ETV
+vector 83 highwayNetwork.node[16].veinsmobility acceleration ETV
+vector 84 highwayNetwork.node[16].veinsmobility co2emission ETV
+vector 85 highwayNetwork.node[17].veinsmobility posx ETV
+vector 86 highwayNetwork.node[17].veinsmobility posy ETV
+vector 87 highwayNetwork.node[17].veinsmobility speed ETV
+vector 88 highwayNetwork.node[17].veinsmobility acceleration ETV
+vector 89 highwayNetwork.node[17].veinsmobility co2emission ETV
+vector 90 highwayNetwork.node[18].veinsmobility posx ETV
+vector 91 highwayNetwork.node[18].veinsmobility posy ETV
+vector 92 highwayNetwork.node[18].veinsmobility speed ETV
+vector 93 highwayNetwork.node[18].veinsmobility acceleration ETV
+vector 94 highwayNetwork.node[18].veinsmobility co2emission ETV
+vector 95 highwayNetwork.node[19].veinsmobility posx ETV
+vector 96 highwayNetwork.node[19].veinsmobility posy ETV
+37	7983 549 2032 30903 15 34 20 3.328978911834 29.078424729684 302.26248370492 5797.9383987632
+36	8532 549 2032 30903 15 34 20 1.3605886530131 2.5730224694125 40.046466942434 82.138016713736
+34	9081 576 1593 30903 14 34 21 1.5972831639228 41.643750106357 462.76262612741 13244.467347256
+28	9657 594 1154 30903 13 34 22 530.1 992.86262612741 15221.312307732 10991412.602124
+27	10251 385 1154 30903 13 34 22 520.2 520.2 11444.4 5953376.88
+vector 97 highwayNetwork.node[19].veinsmobility speed ETV
+33	10694 576 1593 33334 14 35 22 0.973 27.299868803099 238.45201419869 3740.0535375373
+32	11270 582 1593 33334 14 35 22 -4.5 2.4417801132426 22.157837425229 131.63563703082
+31	11852 630 1154 33334 13 35 23 2.1092279310804 35.332297230758 463.2532035407 11597.964071209
+24	12482 419 889 33334 12 35 24 520.2 523.4 12491.2 6501272
+23	12901 646 889 33334 12 35 24 550.2467964593 1013.5 20099.347822733 17393480.809956
+vector 98 highwayNetwork.node[19].veinsmobility acceleration ETV
+vector 99 highwayNetwork.node[19].veinsmobility co2emission ETV
+vector 100 highwayNetwork.node[20].veinsmobility posx ETV
+vector 101 highwayNetwork.node[20].veinsmobility posy ETV
+vector 102 highwayNetwork.node[21].veinsmobility posx ETV
+vector 103 highwayNetwork.node[21].veinsmobility posy ETV
+49	13908 553 3919 37539 18 37 20 2.6116930695776 30.419941524978 293.46530567409 5566.6816490344
+48	14461 553 3919 37539 18 37 20 0.68981463052186 2.5601983566536 39.081667011486 80.868625785753
+46	15014 579 3128 37539 17 37 21 1.7762572988868 40.857924310373 456.11666392572 13057.547870507
+41	15593 597 2471 37539 16 37 22 530.1 986.21666392572 15122.742618267 10842997.926506
+40	16190 388 2471 37539 16 37 22 520.2 520.2 11444.4 5953376.88
+vector 104 highwayNetwork.node[20].veinsmobility speed ETV
+vector 105 highwayNetwork.node[21].veinsmobility speed ETV
+vector 106 highwayNetwork.node[20].veinsmobility acceleration ETV
+vector 107 highwayNetwork.node[20].veinsmobility co2emission ETV
+vector 108 highwayNetwork.node[21].veinsmobility acceleration ETV
+vector 109 highwayNetwork.node[21].veinsmobility co2emission ETV
+vector 110 highwayNetwork.node[22].veinsmobility posx ETV
+vector 111 highwayNetwork.node[22].veinsmobility posy ETV
+vector 112 highwayNetwork.node[22].veinsmobility speed ETV
+vector 113 highwayNetwork.node[22].veinsmobility acceleration ETV
+vector 114 highwayNetwork.node[22].veinsmobility co2emission ETV
+vector 115 highwayNetwork.node[23].veinsmobility posx ETV
+vector 116 highwayNetwork.node[23].veinsmobility posy ETV
+vector 117 highwayNetwork.node[23].veinsmobility speed ETV
+vector 118 highwayNetwork.node[23].veinsmobility acceleration ETV
+vector 119 highwayNetwork.node[23].veinsmobility co2emission ETV
+79	17570 583 11311 57104 24 45 22 0.973 27.370603026266 270.65384273278 4790.9661527647
+78	18153 605 11311 57104 24 45 22 -4.5 2.5846755577717 26.284595825787 146.73689785364
+75	18758 637 9710 57104 23 45 23 1.7110360453138 36.409209114598 482.41400379865 12587.253054583
+70	19395 658 8110 57104 22 45 24 530.1 1012.5140037986 17137.576381966 12850609.383071
+69	20053 430 8110 57104 22 45 24 520.2 523.4 12494.4 6504611.52
+vector 120 highwayNetwork.node[24].veinsmobility posx ETV
+vector 121 highwayNetwork.node[24].veinsmobility posy ETV
+vector 122 highwayNetwork.node[24].veinsmobility speed ETV
+vector 123 highwayNetwork.node[24].veinsmobility acceleration ETV
+vector 124 highwayNetwork.node[24].veinsmobility co2emission ETV
+vector 125 highwayNetwork.node[25].veinsmobility posx ETV
+vector 126 highwayNetwork.node[25].veinsmobility posy ETV
+vector 127 highwayNetwork.node[26].veinsmobility posx ETV
+vector 128 highwayNetwork.node[26].veinsmobility posy ETV
+vector 129 highwayNetwork.node[25].veinsmobility speed ETV
+vector 130 highwayNetwork.node[25].veinsmobility acceleration ETV
+vector 131 highwayNetwork.node[25].veinsmobility co2emission ETV
+vector 132 highwayNetwork.node[26].veinsmobility speed ETV
+vector 133 highwayNetwork.node[27].veinsmobility posx ETV
+vector 134 highwayNetwork.node[27].veinsmobility posy ETV
+vector 135 highwayNetwork.node[26].veinsmobility acceleration ETV
+vector 136 highwayNetwork.node[26].veinsmobility co2emission ETV
+vector 137 highwayNetwork.node[28].veinsmobility posx ETV
+vector 138 highwayNetwork.node[28].veinsmobility posy ETV
+vector 139 highwayNetwork.node[27].veinsmobility speed ETV
+vector 140 highwayNetwork.node[27].veinsmobility acceleration ETV
+vector 141 highwayNetwork.node[27].veinsmobility co2emission ETV
+vector 142 highwayNetwork.node[28].veinsmobility speed ETV
+21	21882 1162 507 84428 10 54 45 0.973 30.499773768841 511.36009738565 8594.7444420928
+20	23044 1194 507 84428 10 54 45 -4.5 2.5855512305163 38.839520847177 269.12531630415
+17	24238 1259 378 84428 9 54 46 1.4645417755703 40.304062622747 950.63687422333 24539.265623112
+13	25497 1030 249 84428 8 54 47 520.2 979.39687422333 28106.941661257 17581541.290527
+12	26527 1080 249 84428 8 54 47 520.2 1013.5 32028.310483482 23558474.29071
+vector 143 highwayNetwork.node[29].veinsmobility posx ETV
+vector 144 highwayNetwork.node[29].veinsmobility posy ETV
+vector 145 highwayNetwork.node[28].veinsmobility acceleration ETV
+vector 146 highwayNetwork.node[28].veinsmobility co2emission ETV
+vector 147 highwayNetwork.node[30].veinsmobility posx ETV
+vector 148 highwayNetwork.node[30].veinsmobility posy ETV
+vector 149 highwayNetwork.node[29].veinsmobility speed ETV
+vector 150 highwayNetwork.node[29].veinsmobility acceleration ETV
+vector 151 highwayNetwork.node[29].veinsmobility co2emission ETV
+vector 152 highwayNetwork.node[30].veinsmobility speed ETV
+vector 153 highwayNetwork.node[31].veinsmobility posx ETV
+vector 154 highwayNetwork.node[31].veinsmobility posy ETV
+vector 155 highwayNetwork.node[30].veinsmobility acceleration ETV
+vector 156 highwayNetwork.node[30].veinsmobility co2emission ETV
+vector 157 highwayNetwork.node[31].veinsmobility speed ETV
+vector 158 highwayNetwork.node[31].veinsmobility acceleration ETV
+vector 159 highwayNetwork.node[31].veinsmobility co2emission ETV
+vector 160 highwayNetwork.node[32].veinsmobility posx ETV
+vector 161 highwayNetwork.node[32].veinsmobility posy ETV
+vector 162 highwayNetwork.node[33].veinsmobility posx ETV
+vector 163 highwayNetwork.node[33].veinsmobility posy ETV
+vector 164 highwayNetwork.node[32].veinsmobility speed ETV
+vector 165 highwayNetwork.node[32].veinsmobility acceleration ETV
+vector 166 highwayNetwork.node[32].veinsmobility co2emission ETV
+vector 167 highwayNetwork.node[33].veinsmobility speed ETV
+vector 168 highwayNetwork.node[34].veinsmobility posx ETV
+vector 169 highwayNetwork.node[34].veinsmobility posy ETV
+vector 170 highwayNetwork.node[33].veinsmobility acceleration ETV
+vector 171 highwayNetwork.node[33].veinsmobility co2emission ETV
+vector 172 highwayNetwork.node[34].veinsmobility speed ETV
+vector 173 highwayNetwork.node[34].veinsmobility acceleration ETV
+vector 174 highwayNetwork.node[34].veinsmobility co2emission ETV
+vector 175 highwayNetwork.node[35].veinsmobility posx ETV
+vector 176 highwayNetwork.node[35].veinsmobility posy ETV
+vector 177 highwayNetwork.node[35].veinsmobility speed ETV
+64	29749 1260 6862 149340 21 68 48 0.973 23.35234484411 409.01971464681 5323.851383819
+63	31009 1323 6862 149340 21 68 48 -4.5 2.5948672524886 25.799283983219 255.96430242259
+59	32332 1373 5787 149340 20 68 49 2.5672767461976 35.283167327117 975.64646147026 23780.886615377
+54	33705 1185 4710 149340 19 68 50 530.1 1020.2 43571.29903943 39721487.287072
+53	34890 1134 4710 149340 19 68 50 34.033538529742 520.2 21446.439476162 10247265.854986
+vector 178 highwayNetwork.node[35].veinsmobility acceleration ETV
+vector 179 highwayNetwork.node[35].veinsmobility co2emission ETV
+73	36155 1194 9710 154983 23 69 47 0.973 26.405680946622 465.66790205601 7459.6628701815
+72	37349 1294 9710 154983 23 69 47 -4.5 2.5489337064093 14.787598122363 350.96004636545
+71	38643 1344 8110 154983 22 69 48 2.5723342792829 36.543532995066 983.6320257662 24624.330844072
+62	39987 1119 6862 154983 21 69 49 520.2 1012.3920257662 30492.790274024 20192451.807766
+61	41106 1149 6862 154983 21 69 49 520.2 1013.5 32705.857532219 23548495.164063
+vector 180 highwayNetwork.node[36].veinsmobility posx ETV
+vector 181 highwayNetwork.node[36].veinsmobility posy ETV
+vector 182 highwayNetwork.node[36].veinsmobility speed ETV
+vector 183 highwayNetwork.node[36].veinsmobility acceleration ETV
+vector 184 highwayNetwork.node[36].veinsmobility co2emission ETV
+vector 185 highwayNetwork.node[37].veinsmobility posx ETV
+vector 186 highwayNetwork.node[37].veinsmobility posy ETV
+vector 187 highwayNetwork.node[37].veinsmobility speed ETV
+136	42736 620 77198 181903 52 74 23 0.973 25.9385258639 217.46487662488 3404.0239327144
+135	43356 690 77198 181903 52 74 23 -4.4167699481128 2.5439734391868 13.663627827619 137.30540054926
+132	44046 712 73998 181903 51 74 24 2.1157240657136 35.205717198412 487.79085968589 12079.294180002
+128	44758 731 70795 181903 50 74 25 530.1 1017.8908596859 18127.251693918 13816692.759147
+127	45489 492 70795 181903 50 74 25 520.2 520.2 13005 6765201
+vector 188 highwayNetwork.node[37].veinsmobility acceleration ETV
+vector 189 highwayNetwork.node[37].veinsmobility co2emission ETV
+84	46112 1245 16499 187559 27 75 49 0.973 23.35100003316 441.27570447618 6367.8261406484
+83	47357 1363 16499 187559 27 75 49 -4.5 2.5988917756127 14.128848515891 334.67965532704
+82	48720 1413 14706 187559 26 75 50 2.1647521474864 35.523537789717 982.51659273682 23844.107141859
+81	50133 1191 12912 187559 25 75 51 30.1 520.2 19047.394865529 8902287.3290951
+80	51324 1201 12912 187559 25 75 51 527.16340726318 1020.2 46779.62649347 44193605.195572
+vector 190 highwayNetwork.node[38].veinsmobility posx ETV
+vector 191 highwayNetwork.node[38].veinsmobility posy ETV
+146	52641 626 88178 192870 55 76 22 0.973 26.999134148097 235.21177916787 3576.3312410032
+145	53267 648 88178 192870 55 76 22 -4.5 2.5500014370773 23.086870288718 122.34977367041
+142	53915 682 84428 192870 54 76 23 1.5940206127707 35.557216323889 466.3816580185 11590.448366817
+138	54597 700 80669 192870 53 76 24 530.1 996.4816580185 16997.803204501 12599150.555811
+137	55297 475 80669 192870 53 76 24 520.2 520.2 12484.8 6494592.96
+vector 192 highwayNetwork.node[38].veinsmobility speed ETV
+vector 193 highwayNetwork.node[38].veinsmobility acceleration ETV
+vector 194 highwayNetwork.node[38].veinsmobility co2emission ETV
+vector 195 highwayNetwork.node[39].veinsmobility posx ETV
+vector 196 highwayNetwork.node[39].veinsmobility posy ETV
+vector 197 highwayNetwork.node[39].veinsmobility speed ETV
+156	56137 638 100050 213344 58 80 23 0.973 27.789778115831 244.69216985018 4053.8705019436
+155	56775 681 100050 213344 58 80 23 -4.5 2.5517772617983 17.019697495406 162.46803832063
+152	57456 713 95993 213344 57 80 24 1.4561102757929 36.559137369879 482.06575501451 11997.662938353
+148	58169 735 91938 213344 56 80 25 530.1 1012.1657550145 18110.035753663 13797518.326513
+147	58904 498 91938 213344 56 80 25 520.2 520.2 13005 6765201
+vector 198 highwayNetwork.node[39].veinsmobility acceleration ETV
+vector 199 highwayNetwork.node[39].veinsmobility co2emission ETV
+94	59533 1262 28698 218626 33 81 49 0.973 29.996256756576 490.80485251141 8218.6069534703
+93	60795 1323 28698 218626 33 81 49 -4.5 2.5482657743385 23.99400422186 340.98916348946
+92	62118 1420 26493 218626 32 81 50 2.0350046114065 37.036050308705 984.46883077934 24533.857078329
+91	63538 1198 24285 218626 31 81 51 30.1 520.2 19233.613649134 9038869.881645
+90	64736 1216 24285 218626 31 81 51 525.21116922066 1020.2 47222.281847214 44853990.609495
+99	65952 1200 35544 218626 36 81 46 0.973 29.798196867654 487.2446058569 8323.2942069366
+98	67152 1313 35544 218626 36 81 46 -4.5 2.5681351129198 25.440022591194 304.19095948874
+97	68465 1333 33334 218626 35 81 47 2.5380126828328 36.409111689321 985.06623944352 25133.334743816
+96	69798 1143 30903 218626 34 81 48 30.1 523.4 17659.244124398 8240103.8855422
+95	70941 1130 30903 218626 34 81 48 529.77376055648 1023.4 44531.740569754 42379440.510783
+vector 200 highwayNetwork.node[40].veinsmobility posx ETV
+vector 201 highwayNetwork.node[40].veinsmobility posy ETV
+vector 202 highwayNetwork.node[41].veinsmobility posx ETV
+vector 203 highwayNetwork.node[41].veinsmobility posy ETV
+vector 204 highwayNetwork.node[40].veinsmobility speed ETV
+vector 205 highwayNetwork.node[41].veinsmobility speed ETV
+vector 206 highwayNetwork.node[40].veinsmobility acceleration ETV
+vector 207 highwayNetwork.node[40].veinsmobility co2emission ETV
+vector 208 highwayNetwork.node[41].veinsmobility acceleration ETV
+vector 209 highwayNetwork.node[41].veinsmobility co2emission ETV
+109	72683 1276 42199 233411 39 84 46 0.973 29.715232840936 461.65480560944 7280.3838641401
+108	73959 1324 42199 233411 39 84 46 -4.5 2.5970629891846 32.996353532386 270.64629373116
+105	75283 1388 39976 233411 38 84 47 1.5349268991034 36.440253142989 956.16735076531 24651.386980997
+103	76671 1216 37539 233411 37 84 48 530.1 1020.2 41319.366271091 37338513.892979
+102	77887 1147 37539 233411 37 84 48 53.512649234693 520.2 21119.729273846 10141678.838875
+vector 210 highwayNetwork.node[42].veinsmobility posx ETV
+vector 211 highwayNetwork.node[42].veinsmobility posy ETV
+vector 212 highwayNetwork.node[43].veinsmobility posx ETV
+vector 213 highwayNetwork.node[43].veinsmobility posy ETV
+107	79266 1296 42199 238324 39 85 47 0.973 32.576195779894 532.55251418103 9628.0479734347
+106	80562 1381 42199 238324 39 85 47 -4.5 2.589411442983 40.84938939394 254.51305806723
+104	81943 1417 39976 238324 38 85 48 2.0334746356588 42.882864029599 976.66890860147 25560.373640098
+101	83360 1233 37539 238324 37 85 49 30.1 523.4 17789.590087906 8248729.3329067
+100	84593 1205 37539 238324 37 85 49 538.17109139853 1023.4 46264.981158067 44537719.269253
+vector 214 highwayNetwork.node[42].veinsmobility speed ETV
+vector 215 highwayNetwork.node[43].veinsmobility speed ETV
+171	85916 629 127765 243601 64 86 23 0.973 29.389641307098 227.93358977877 3751.7813169789
+170	86545 670 127765 243601 64 86 23 -4.5 2.5477489509387 9.915470211771 166.83561941801
+167	87215 715 122775 243601 63 86 24 2.4172514801612 36.12584893133 474.28719524822 11613.422893681
+163	87930 739 117776 243601 62 86 25 530.1 1004.3871952482 18141.768566267 13833239.41207
+162	88669 500 117776 243601 62 86 25 520.2 523.4 13049.8 6811954.28
+vector 216 highwayNetwork.node[42].veinsmobility acceleration ETV
+vector 217 highwayNetwork.node[42].veinsmobility co2emission ETV
+vector 218 highwayNetwork.node[43].veinsmobility acceleration ETV
+vector 219 highwayNetwork.node[43].veinsmobility co2emission ETV
+vector 220 highwayNetwork.node[44].veinsmobility posx ETV
+vector 221 highwayNetwork.node[44].veinsmobility posy ETV
+vector 222 highwayNetwork.node[45].veinsmobility posx ETV
+vector 223 highwayNetwork.node[45].veinsmobility posy ETV
+vector 224 highwayNetwork.node[44].veinsmobility speed ETV
+vector 225 highwayNetwork.node[45].veinsmobility speed ETV
+39	89781 1899 2032 258372 15 89 75 -2.3095517499894 28.607047043614 658.59492343215 10026.148118692
+38	91680 2075 2032 258372 15 89 75 -4.5 2.5962090888061 12.525942764751 536.98702267587
+35	93755 2146 1593 258372 14 89 76 2.0628387846518 35.19944724932 1470.8885631349 35105.733211714
+30	95901 1910 1154 258372 13 89 77 30.1 1003.4685631349 37580.669290081 22896458.417099
+29	97811 1695 1154 258372 13 89 77 520.2 1020.2 60945.590299682 52184931.210984
+vector 226 highwayNetwork.node[46].veinsmobility posx ETV
+vector 227 highwayNetwork.node[46].veinsmobility posy ETV
+vector 228 highwayNetwork.node[44].veinsmobility acceleration ETV
+vector 229 highwayNetwork.node[44].veinsmobility co2emission ETV
+vector 230 highwayNetwork.node[45].veinsmobility acceleration ETV
+vector 231 highwayNetwork.node[45].veinsmobility co2emission ETV
+58	99884 1860 4710 263627 19 90 72 0.973 27.804314660348 656.06449074783 9512.0245690639
+57	101744 1992 4710 263627 19 90 72 -4.5 2.5626483310945 28.795962303913 439.82218658702
+52	103736 2062 3919 263627 18 90 73 1.9205229326617 35.889094109917 1474.8836114968 36638.246299971
+45	105798 1634 3128 263627 17 90 74 520.2 1023.4 55797.790605763 45877845.248565
+44	107432 1824 3128 263627 17 90 74 36.136388503226 1013.5 41579.540632917 27536838.429646
+vector 232 highwayNetwork.node[47].veinsmobility posx ETV
+vector 233 highwayNetwork.node[47].veinsmobility posy ETV
+vector 234 highwayNetwork.node[48].veinsmobility posx ETV
+vector 235 highwayNetwork.node[48].veinsmobility posy ETV
+vector 236 highwayNetwork.node[46].veinsmobility speed ETV
+vector 237 highwayNetwork.node[46].veinsmobility acceleration ETV
+vector 238 highwayNetwork.node[46].veinsmobility co2emission ETV
+vector 239 highwayNetwork.node[47].veinsmobility speed ETV
+vector 240 highwayNetwork.node[48].veinsmobility speed ETV
+vector 241 highwayNetwork.node[47].veinsmobility acceleration ETV
+vector 242 highwayNetwork.node[47].veinsmobility co2emission ETV
+vector 243 highwayNetwork.node[48].veinsmobility acceleration ETV
+vector 244 highwayNetwork.node[48].veinsmobility co2emission ETV
+vector 245 highwayNetwork.node[49].veinsmobility posx ETV
+vector 246 highwayNetwork.node[49].veinsmobility posy ETV
+vector 247 highwayNetwork.node[49].veinsmobility speed ETV
+vector 248 highwayNetwork.node[49].veinsmobility acceleration ETV
+vector 249 highwayNetwork.node[49].veinsmobility co2emission ETV
+4	110364 2291 32 297777 3 96 94 -2.1014699902401 26.795705055775 886.37414362721 13773.880247667
+3	112655 2436 32 297777 3 96 94 -4.5 2.5901939699426 31.384899679217 621.9221462902
+2	115091 2552 17 297777 2 96 95 1.4392818092834 36.116051286715 1976.6436291753 50044.851792848
+1	117643 2145 2 297777 1 96 96 30.1 1023.4 58756.436690092 45519882.984643
+0	119788 2099 2 297777 1 96 96 35.71637082474 1023.4 65305.566963461 52271931.807826
+vector 250 highwayNetwork.node[50].veinsmobility posx ETV
+vector 251 highwayNetwork.node[50].veinsmobility posy ETV
+vector 252 highwayNetwork.node[50].veinsmobility speed ETV
+66	122062 1980 6862 309753 21 98 78 0.080419566230486 28.596770444959 653.87288370464 9613.2269116682
+65	124042 2208 6862 309753 21 98 78 -4.5 2.5825720694149 12.488585434124 507.15575864047
+60	126250 2243 5787 309753 20 98 79 1.6638731566025 36.202621733863 1470.4318426685 34906.748049671
+56	128493 2004 4710 309753 19 98 80 30.1 1003.0118426685 39164.24545546 23669282.154876
+55	130497 1791 4710 309753 19 98 80 520.2 1020.2 62877.561970014 53563722.427047
+vector 253 highwayNetwork.node[50].veinsmobility acceleration ETV
+vector 254 highwayNetwork.node[50].veinsmobility co2emission ETV
+vector 255 highwayNetwork.node[51].veinsmobility posx ETV
+vector 256 highwayNetwork.node[51].veinsmobility posy ETV
+vector 257 highwayNetwork.node[51].veinsmobility speed ETV
+9	132594 2366 129 327356 6 101 96 -2.1035229627635 27.331749056021 875.16381490103 13234.80298445
+8	134960 2523 129 327356 6 101 96 -4.5 2.573371305503 29.662915866331 648.4035469323
+7	137483 2618 88 327356 5 101 97 1.2953648990485 36.312511947554 1961.5579294955 48868.699484473
+6	140101 2195 47 327356 4 101 98 30.1 1023.4 59967.92000198 46211273.931073
+5	142296 2169 47 327356 4 101 98 45.642070504458 1020.2 67241.255691211 54079937.564244
+141	144465 1295 84428 327356 54 101 48 0.973 27.82664286869 446.18006469248 6759.9203013165
+140	145760 1402 84428 327356 54 101 48 -4.5 2.5574014024576 12.741920296073 326.54802918256
+139	147162 1462 80669 327356 53 101 49 2.0787778133594 35.495334820428 985.9088657718 23917.851341422
+134	148624 1253 77198 327356 52 101 50 30.1 523.4 18771.629961286 8814872.6948788
+133	149877 1259 77198 327356 52 101 50 528.9311342282 1023.4 45691.403030762 43057254.818524
+vector 258 highwayNetwork.node[51].veinsmobility acceleration ETV
+vector 259 highwayNetwork.node[51].veinsmobility co2emission ETV
+vector 260 highwayNetwork.node[52].veinsmobility posx ETV
+vector 261 highwayNetwork.node[52].veinsmobility posy ETV
+vector 262 highwayNetwork.node[52].veinsmobility speed ETV
+vector 263 highwayNetwork.node[52].veinsmobility acceleration ETV
+vector 264 highwayNetwork.node[52].veinsmobility co2emission ETV
+151	151573 1341 95993 349864 57 105 49 0.973 28.99743286274 490.22935943764 8019.7187618837
+150	152914 1460 95993 349864 57 105 49 -4.5 2.5990329370135 27.000704328181 315.52255246982
+149	154374 1496 91938 349864 56 105 50 2.1888117324275 37.21911022779 977.81273708349 24254.185684812
+144	155870 1286 88178 349864 55 105 51 30.1 520.2 19180.434066755 8973877.115972
+143	157156 1289 88178 349864 55 105 51 531.86726291651 1020.2 47556.303778974 45393841.180795
+vector 265 highwayNetwork.node[53].veinsmobility posx ETV
+vector 266 highwayNetwork.node[53].veinsmobility posy ETV
+vector 267 highwayNetwork.node[53].veinsmobility speed ETV
+16	158620 2543 378 361078 9 107 99 0.56434466832136 23.89877795366 854.39570047558 11680.030322235
+15	161163 2756 378 361078 9 107 99 -4.5 2.5440954043297 28.069847650111 586.58458313449
+14	163919 2825 249 361078 8 107 100 2.4706868049456 35.399988127762 1967.3213365421 47520.295288517
+11	166744 2388 170 361078 7 107 101 30.1 1023.4 62414.980256278 48322643.80616
+10	169132 2366 170 361078 7 107 101 45.038663457903 1023.4 68582.755855888 54629450.25976
+vector 268 highwayNetwork.node[53].veinsmobility acceleration ETV
+vector 269 highwayNetwork.node[53].veinsmobility co2emission ETV
+vector 270 highwayNetwork.node[54].veinsmobility posx ETV
+vector 271 highwayNetwork.node[54].veinsmobility posy ETV
+vector 272 highwayNetwork.node[54].veinsmobility speed ETV
+vector 273 highwayNetwork.node[54].veinsmobility acceleration ETV
+vector 274 highwayNetwork.node[54].veinsmobility co2emission ETV
+26	171935 2585 889 383111 12 111 100 0.973 24.382376053372 822.18015623148 11200.090573613
+25	174520 2821 889 383111 12 111 100 -4.5 2.5999843505444 28.191838838538 575.6936469671
+22	177341 2871 698 383111 11 111 101 1.6184831429971 34.999184307838 1961.9692164705 46556.481627951
+19	180212 2450 507 383111 10 111 102 30.1 1023.4 62344.679168213 47891073.798081
+18	182662 2395 507 383111 10 111 102 50.390783529483 1023.4 69665.71200027 55695893.626731
+166	185057 1335 122775 383111 63 111 49 0.973 26.636426643347 461.63626148637 7075.4373380488
+165	186392 1419 122775 383111 63 111 49 -4.5 2.5897368235048 13.54475545173 361.67704842839
+164	187811 1506 117776 383111 62 111 50 2.4100788243115 35.791313728114 980.94897797117 23916.130856238
+161	189317 1291 113110 383111 61 111 51 30.1 520.2 19509.650845241 9170168.0548326
+160	190608 1304 113110 383111 61 111 51 528.73102202883 1020.2 46827.996011434 44256055.279117
+vector 275 highwayNetwork.node[55].veinsmobility posx ETV
+vector 276 highwayNetwork.node[55].veinsmobility posy ETV
+vector 277 highwayNetwork.node[55].veinsmobility speed ETV
+51	192087 2470 3919 393941 18 113 96 0.76733806581931 25.620276252756 875.01057341494 13255.538145633
+50	194557 2735 3919 393941 18 113 96 -4.5 2.5730471223826 31.481848020924 577.8754403491
+47	197292 2773 3128 393941 17 113 97 1.8967820865102 35.153187671969 1971.0241117578 48719.447210492
+43	200065 2358 2471 393941 16 113 98 30.1 1023.4 59807.797089731 45994499.933627
+42	202423 2317 2471 393941 16 113 98 41.33588824218 1023.4 67082.745528732 53744821.581426
+231	204740 673 263627 393941 90 113 24 0.973 17.913825429939 193.41819558503 2318.0748846279
+230	205413 720 263627 393941 90 113 24 -4.5 2.5695382830687 11.344093785702 135.23437936907
+225	206133 762 258372 393941 89 113 25 2.115018884954 30.771503566467 486.95282104786 11361.645346085
+223	206895 783 253110 393941 88 113 26 530.1 1017.0528210479 19134.904853577 14807974.615512
+222	207678 534 253110 393941 88 113 26 520.2 520.2 13525.2 7035809.04
+vector 278 highwayNetwork.node[55].veinsmobility acceleration ETV
+vector 279 highwayNetwork.node[55].veinsmobility co2emission ETV
+vector 280 highwayNetwork.node[56].veinsmobility posx ETV
+vector 281 highwayNetwork.node[56].veinsmobility posy ETV
+vector 282 highwayNetwork.node[57].veinsmobility posx ETV
+vector 283 highwayNetwork.node[57].veinsmobility posy ETV
+vector 284 highwayNetwork.node[56].veinsmobility speed ETV
+vector 285 highwayNetwork.node[56].veinsmobility acceleration ETV
+vector 286 highwayNetwork.node[56].veinsmobility co2emission ETV
+vector 287 highwayNetwork.node[57].veinsmobility speed ETV
+vector 288 highwayNetwork.node[58].veinsmobility posx ETV
+vector 289 highwayNetwork.node[58].veinsmobility posy ETV
+vector 290 highwayNetwork.node[57].veinsmobility acceleration ETV
+vector 291 highwayNetwork.node[57].veinsmobility co2emission ETV
+244	209071 707 280169 419243 93 118 26 0.973 23.758482194565 207.88398016903 2898.4939254314
+243	209778 792 280169 419243 93 118 26 -4.5 2.5511750224512 3.5537331621627 168.91806286753
+240	210570 826 274533 419243 92 118 27 1.5146571290214 33.527433863912 485.11072318504 10923.004824053
+235	211396 848 268897 419243 91 118 28 530.1 1015.210723185 20898.47024317 16428777.606492
+234	212244 579 268897 419243 91 118 28 520.2 523.4 14610.4 7623778.4
+vector 292 highwayNetwork.node[58].veinsmobility speed ETV
+77	212882 2509 11311 424840 24 119 96 0.94668108827721 25.07374985541 848.23822186221 12693.783240547
+76	215391 2723 11311 424840 24 119 96 -4.5 2.5962161442731 29.078349891652 596.46076520717
+74	218114 2791 9710 424840 23 119 97 1.3945745720761 36.036272129674 1968.3377786866 48646.627895435
+68	220905 2388 8110 424840 22 119 98 30.1 1023.4 59856.030868098 46332992.942068
+67	223293 2328 8110 424840 22 119 98 44.022221313439 1023.4 66963.707191362 53731071.411894
+vector 293 highwayNetwork.node[58].veinsmobility acceleration ETV
+vector 294 highwayNetwork.node[58].veinsmobility co2emission ETV
+124	225752 2042 65167 435043 48 121 74 0.74703763242886 26.837001205273 683.29761625634 10327.909966577
+123	227794 2174 65167 435043 48 121 74 -4.5 2.5905285159126 31.963497862207 442.68223038886
+122	229968 2258 62477 435043 47 121 75 1.4189438254572 34.834732002943 1456.139944853 35281.919946502
+121	232226 2021 59787 435043 46 121 76 30.1 988.71994485303 35974.864001636 21050281.533727
+120	234247 1825 59787 435043 46 121 76 523.4 1023.4 60081.946686788 51354606.664816
+184	236072 1371 170943 435043 72 121 50 0.973 25.897189359526 443.90106343685 6637.8798206175
+183	237443 1469 170943 435043 72 121 50 -4.5 2.5727189898957 14.810247716099 319.04698019581
+182	238912 1545 165622 435043 71 121 51 1.4157621443039 35.65309596812 983.26268894576 23398.545970377
+181	240457 1333 160305 435043 70 121 52 30.1 523.4 19470.799643691 9131869.5014444
+180	241790 1337 160305 435043 70 121 52 531.57731105424 1023.4 47928.747519536 45439455.362539
+vector 295 highwayNetwork.node[59].veinsmobility posx ETV
+vector 296 highwayNetwork.node[59].veinsmobility posy ETV
+vector 297 highwayNetwork.node[60].veinsmobility posx ETV
+vector 298 highwayNetwork.node[60].veinsmobility posy ETV
+vector 299 highwayNetwork.node[59].veinsmobility speed ETV
+vector 300 highwayNetwork.node[60].veinsmobility speed ETV
+89	243477 2467 22290 444920 30 123 94 -0.34318531595769 27.043565740661 872.2808910884 13019.453868879
+88	245944 2635 22290 444920 30 123 94 -4.5 2.5702729575569 29.97543815533 604.52603774474
+87	248579 2742 20292 444920 29 123 95 1.9810584653635 36.784106314461 1971.7014842803 49473.274385579
+86	251321 2345 18294 444920 28 123 96 30.1 1023.4 59072.203703357 45830114.043547
+85	253666 2300 18294 444920 28 123 96 40.658515719651 1023.4 65359.046542825 52271359.006999
+vector 301 highwayNetwork.node[59].veinsmobility acceleration ETV
+vector 302 highwayNetwork.node[59].veinsmobility co2emission ETV
+vector 303 highwayNetwork.node[60].veinsmobility acceleration ETV
+vector 304 highwayNetwork.node[60].veinsmobility co2emission ETV
+vector 305 highwayNetwork.node[61].veinsmobility posx ETV
+vector 306 highwayNetwork.node[61].veinsmobility posy ETV
+vector 307 highwayNetwork.node[62].veinsmobility posx ETV
+vector 308 highwayNetwork.node[62].veinsmobility posy ETV
+vector 309 highwayNetwork.node[61].veinsmobility speed ETV
+vector 310 highwayNetwork.node[62].veinsmobility speed ETV
+vector 311 highwayNetwork.node[61].veinsmobility acceleration ETV
+vector 312 highwayNetwork.node[61].veinsmobility co2emission ETV
+vector 313 highwayNetwork.node[62].veinsmobility acceleration ETV
+vector 314 highwayNetwork.node[62].veinsmobility co2emission ETV
+vector 315 highwayNetwork.node[63].veinsmobility posx ETV
+vector 316 highwayNetwork.node[63].veinsmobility posy ETV
+vector 317 highwayNetwork.node[63].veinsmobility speed ETV
+vector 318 highwayNetwork.node[63].veinsmobility acceleration ETV
+vector 319 highwayNetwork.node[63].veinsmobility co2emission ETV
+vector 320 highwayNetwork.node[64].veinsmobility posx ETV
+vector 321 highwayNetwork.node[64].veinsmobility posy ETV
+vector 322 highwayNetwork.node[64].veinsmobility speed ETV
+207	257321 1408 233411 493172 84 132 49 0.54030509329433 26.280172516231 382.27100404915 5244.2931984244
+206	258729 1536 233411 493172 84 132 49 -4.3761428036972 2.5806819736725 23.762500611194 242.43102228389
+204	260265 1524 228489 493172 83 132 50 1.3970360616688 36.167700189957 971.33317130393 22770.852247369
+201	261789 1332 223566 493172 82 132 51 530.1 1023.4 44835.727136665 41211665.856008
+200	263121 1299 223566 493172 82 132 51 43.506828696073 523.4 21634.629213244 10277393.084295
+vector 323 highwayNetwork.node[64].veinsmobility acceleration ETV
+vector 324 highwayNetwork.node[64].veinsmobility co2emission ETV
+vector 325 highwayNetwork.node[65].veinsmobility posx ETV
+vector 326 highwayNetwork.node[65].veinsmobility posy ETV
+vector 327 highwayNetwork.node[65].veinsmobility speed ETV
+219	264726 1403 248516 510734 87 135 49 0.87898109739345 22.299783831458 368.74296167454 4501.769423176
+218	266129 1521 248516 510734 87 135 49 -4.5 2.5721756665735 23.635195461527 214.70821319145
+215	267650 1533 243601 510734 86 135 50 1.8550624249037 34.319686403894 973.66895180466 22683.444676003
+213	269183 1343 238324 510734 85 135 51 530.1 1023.4 44631.406486152 40859909.694375
+212	270526 1293 238324 510734 85 135 51 41.171048195338 523.4 21762.498256491 10378939.255827
+vector 328 highwayNetwork.node[65].veinsmobility acceleration ETV
+vector 329 highwayNetwork.node[65].veinsmobility co2emission ETV
+vector 330 highwayNetwork.node[66].veinsmobility posx ETV
+vector 331 highwayNetwork.node[66].veinsmobility posy ETV
+vector 332 highwayNetwork.node[67].veinsmobility posx ETV
+vector 333 highwayNetwork.node[67].veinsmobility posy ETV
+vector 334 highwayNetwork.node[66].veinsmobility speed ETV
+vector 335 highwayNetwork.node[66].veinsmobility acceleration ETV
+vector 336 highwayNetwork.node[66].veinsmobility co2emission ETV
+vector 337 highwayNetwork.node[67].veinsmobility speed ETV
+vector 338 highwayNetwork.node[68].veinsmobility posx ETV
+vector 339 highwayNetwork.node[68].veinsmobility posy ETV
+vector 340 highwayNetwork.node[67].veinsmobility acceleration ETV
+vector 341 highwayNetwork.node[67].veinsmobility co2emission ETV
+114	272678 2741 49302 540994 42 140 99 0.973 26.033657888838 845.00169464234 11878.743056826
+113	275419 2932 49302 540994 42 140 99 -4.5 2.5666466830065 25.669779239363 614.01559419635
+112	278351 3019 46860 540994 41 140 100 1.5817663287045 35.994050550181 1978.8518413365 47386.120367934
+111	281370 2581 44416 540994 40 140 101 30.1 1023.4 62999.326117385 49214006.245461
+110	283951 2555 44416 540994 40 140 101 28.348158663479 1020.2 68313.067598323 54778059.475104
+vector 342 highwayNetwork.node[69].veinsmobility posx ETV
+vector 343 highwayNetwork.node[69].veinsmobility posy ETV
+vector 344 highwayNetwork.node[68].veinsmobility speed ETV
+vector 345 highwayNetwork.node[68].veinsmobility acceleration ETV
+vector 346 highwayNetwork.node[68].veinsmobility co2emission ETV
+vector 347 highwayNetwork.node[69].veinsmobility speed ETV
+vector 348 highwayNetwork.node[70].veinsmobility posx ETV
+vector 349 highwayNetwork.node[70].veinsmobility posy ETV
+vector 350 highwayNetwork.node[69].veinsmobility acceleration ETV
+vector 351 highwayNetwork.node[69].veinsmobility co2emission ETV
+119	287118 2750 57104 561199 45 143 99 -0.64635452871789 28.545703911208 834.8430595685 11407.117547834
+118	289868 2942 57104 561199 45 143 99 -4.5 2.5656768816756 26.685228237698 595.84274299497
+117	292810 3024 54425 561199 44 143 100 2.5822891418589 35.253899393614 1979.3594754359 47390.790524537
+116	295834 2587 51744 561199 43 143 101 30.1 1020.2 62850.56747715 48642978.870885
+115	298421 2572 51744 561199 43 143 101 27.840524564136 1023.4 68175.26721273 54416184.495812
+vector 352 highwayNetwork.node[70].veinsmobility speed ETV
+249	301052 1363 297777 568332 96 144 49 0.973 26.466087206847 449.65877658126 7100.0037331356
+248	302415 1478 297777 568332 96 144 49 -4.5 2.5672599350568 11.788179968458 354.87654737286
+247	303893 1540 291793 568332 95 144 50 2.3960217739921 35.609849884897 969.3802795578 23320.823515038
+246	305433 1323 285806 568332 94 144 51 30.1 520.2 19292.892632534 9048548.5174876
+245	306756 1327 285806 568332 94 144 51 540.2997204422 1020.2 46948.12118806 44422703.685241
+vector 353 highwayNetwork.node[71].veinsmobility posx ETV
+vector 354 highwayNetwork.node[71].veinsmobility posy ETV
+vector 355 highwayNetwork.node[70].veinsmobility acceleration ETV
+vector 356 highwayNetwork.node[70].veinsmobility co2emission ETV
+vector 357 highwayNetwork.node[72].veinsmobility posx ETV
+vector 358 highwayNetwork.node[72].veinsmobility posy ETV
+vector 359 highwayNetwork.node[71].veinsmobility speed ETV
+vector 360 highwayNetwork.node[71].veinsmobility acceleration ETV
+vector 361 highwayNetwork.node[71].veinsmobility co2emission ETV
+vector 362 highwayNetwork.node[72].veinsmobility speed ETV
+vector 363 highwayNetwork.node[73].veinsmobility posx ETV
+vector 364 highwayNetwork.node[73].veinsmobility posy ETV
+vector 365 highwayNetwork.node[72].veinsmobility acceleration ETV
+vector 366 highwayNetwork.node[72].veinsmobility co2emission ETV
+131	308942 2718 73998 596118 51 148 98 0.31770668363878 25.670684841659 853.0107435021 12243.793529324
+130	311660 2948 73998 596118 51 148 98 -4.5 2.5780427202117 29.264689858437 595.17778693239
+129	314608 2990 70795 596118 50 148 99 1.4925189925823 35.215305858686 1975.0361672598 48399.305186285
+126	317598 2584 67857 596118 49 148 100 30.1 1023.4 61003.187734364 47034838.690655
+125	320182 2544 67857 596118 49 148 100 37.323832740198 1020.2 68700.942635556 55445163.816468
+vector 367 highwayNetwork.node[74].veinsmobility posx ETV
+vector 368 highwayNetwork.node[74].veinsmobility posy ETV
+vector 369 highwayNetwork.node[73].veinsmobility speed ETV
+vector 370 highwayNetwork.node[73].veinsmobility acceleration ETV
+vector 371 highwayNetwork.node[73].veinsmobility co2emission ETV
+vector 372 highwayNetwork.node[74].veinsmobility speed ETV
+189	323091 2088 187559 611248 75 150 76 0.973 24.523836571346 659.75298205716 9907.8486164958
+188	325179 2269 187559 611248 75 150 76 -4.5 2.582482814882 15.227590167229 522.86600170543
+187	327448 2350 181903 611248 74 150 77 1.5035662360722 35.424883178598 1471.6464331319 35504.672112851
+186	329798 2113 176262 611248 73 150 78 30.1 1009.3864331319 38212.923861683 23300839.869116
+185	331911 1905 176262 611248 73 150 78 523.4 1020.2 61710.337431679 52797651.042938
+259	333816 1366 333336 611248 102 150 49 0.973 27.312111361817 448.99710861127 7159.2048234042
+258	335182 1492 333336 611248 102 150 49 -4.5 2.5993250872241 15.092700636134 336.92727822968
+257	336674 1541 327356 611248 101 150 50 1.430606802064 35.897211920214 968.37078562697 23397.516230764
+256	338215 1329 321371 611248 100 150 51 30.1 520.2 19060.263942226 8911267.8738306
+255	339544 1336 321371 611248 100 150 51 541.30921437303 1020.2 47072.804390915 44625018.407435
+312	340880 682 465061 611248 127 150 24 0.973 28.628694540969 231.9788569048 3667.8799230802
+311	341562 737 465061 611248 127 150 24 -4.5 2.5360462942161 14.848229557476 154.59973058016
+309	342299 775 459772 611248 126 150 25 1.4761770415353 35.509559794329 485.11670905022 11706.809552323
+306	343074 793 454481 611248 125 150 26 530.1 1015.2167090502 18962.516518562 14560007.98855
+305	343867 546 454481 611248 125 150 26 520.2 520.2 13525.2 7035809.04
+vector 373 highwayNetwork.node[74].veinsmobility acceleration ETV
+vector 374 highwayNetwork.node[74].veinsmobility co2emission ETV
+vector 375 highwayNetwork.node[75].veinsmobility posx ETV
+vector 376 highwayNetwork.node[75].veinsmobility posy ETV
+194	344660 2081 203108 625198 78 152 75 -0.84899745090535 25.683960635174 658.23420740791 9686.7374088453
+193	346741 2284 203108 625198 78 152 75 -4.5 2.5946114616934 25.727544274114 464.86237876677
+192	349025 2326 198160 625198 77 152 76 1.0037185099186 35.209213469618 1457.159175675 35362.463612495
+191	351351 2081 192870 625198 76 152 77 30.1 989.73917567497 36874.306598232 21810728.787175
+190	353432 1899 192870 625198 76 152 77 523.4 1023.4 61136.257106574 52454194.37805
+vector 377 highwayNetwork.node[75].veinsmobility speed ETV
+vector 378 highwayNetwork.node[75].veinsmobility acceleration ETV
+vector 379 highwayNetwork.node[75].veinsmobility co2emission ETV
+vector 380 highwayNetwork.node[76].veinsmobility posx ETV
+vector 381 highwayNetwork.node[76].veinsmobility posy ETV
+vector 382 highwayNetwork.node[76].veinsmobility speed ETV
+159	355696 2724 108763 651370 60 156 97 -2.1822653098434 26.490743404034 838.3520317108 12390.902093156
+158	358420 2880 108763 651370 60 156 97 -4.5 2.5943564996356 27.132036883677 619.82364937641
+157	361300 2986 104408 651370 59 156 98 2.2140805609059 35.540276815772 1959.5174522413 48152.103617338
+154	364286 2579 100050 651370 58 156 99 30.1 1023.4 61169.613270108 47318023.598699
+153	366865 2551 100050 651370 58 156 99 52.842547758652 1023.4 67298.442696349 53675938.128978
+vector 383 highwayNetwork.node[76].veinsmobility acceleration ETV
+vector 384 highwayNetwork.node[76].veinsmobility co2emission ETV
+vector 385 highwayNetwork.node[77].veinsmobility posx ETV
+vector 386 highwayNetwork.node[77].veinsmobility posy ETV
+vector 387 highwayNetwork.node[77].veinsmobility speed ETV
+vector 388 highwayNetwork.node[78].veinsmobility posx ETV
+vector 389 highwayNetwork.node[78].veinsmobility posy ETV
+vector 390 highwayNetwork.node[77].veinsmobility acceleration ETV
+vector 391 highwayNetwork.node[77].veinsmobility co2emission ETV
+vector 392 highwayNetwork.node[79].veinsmobility posx ETV
+vector 393 highwayNetwork.node[79].veinsmobility posy ETV
+vector 394 highwayNetwork.node[78].veinsmobility speed ETV
+vector 395 highwayNetwork.node[78].veinsmobility acceleration ETV
+vector 396 highwayNetwork.node[78].veinsmobility co2emission ETV
+vector 397 highwayNetwork.node[79].veinsmobility speed ETV
+341	370334 661 540994 692516 140 162 23 0.973 26.241913676669 232.57647485198 3537.040536558
+340	370995 701 540994 692516 140 162 23 -4.5 2.59691771043 14.998964437911 162.14996392992
+337	371696 743 534642 692516 139 162 24 2.1374959556153 35.346930578793 478.02626686185 11629.201772674
+333	372439 762 528291 692516 138 162 25 530.1 1008.1262668618 18170.414219423 13873308.538292
+332	373201 525 528291 692516 138 162 25 520.2 520.2 13005 6765201
+vector 398 highwayNetwork.node[79].veinsmobility acceleration ETV
+vector 399 highwayNetwork.node[79].veinsmobility co2emission ETV
+vector 400 highwayNetwork.node[80].veinsmobility posx ETV
+vector 401 highwayNetwork.node[80].veinsmobility posy ETV
+279	373973 1418 399192 707117 114 164 51 0.973 27.348110143237 441.75361167358 6696.7804208599
+278	375391 1559 399192 707117 114 164 51 -4.5 2.5674706550082 4.8591799703191 348.88387661157
+277	376950 1609 393941 707117 113 164 52 1.3654166697292 35.880280566347 984.67054195795 23441.251886649
+276	378559 1385 388697 707117 112 164 53 30.1 523.4 19628.721586412 9204275.7663068
+275	379944 1388 388697 707117 112 164 53 530.16945804205 1023.4 48402.449906749 45641990.18497
+vector 402 highwayNetwork.node[80].veinsmobility speed ETV
+174	381391 2773 138390 714604 66 165 100 0.062571205525086 27.24212097171 844.76261178113 12368.436943761
+173	384164 3034 138390 714604 66 165 100 -4.5 2.5827000037068 23.268432492484 626.87860159442
+172	387198 3079 133077 714604 65 165 101 2.4118595914915 36.625317568476 1982.2332795074 47552.090536701
+169	390277 2638 127765 714604 64 165 102 30.1 1023.4 64555.675698885 50632143.481763
+168	392915 2642 127765 714604 64 165 102 30.126720492602 1023.4 67825.98576758 53711225.665093
+217	395557 2152 248516 714604 87 165 79 0.973 27.621065734984 682.9126477262 10752.095622494
+216	397709 2374 248516 714604 87 165 79 -4.5 2.5609703255352 6.8302510172958 555.47313283122
+214	400083 2450 243601 714604 86 165 80 2.0959424037952 36.615477557679 1485.8674015584 35450.947077879
+211	402533 2223 238324 714604 85 165 81 30.1 1018.4474015584 40965.168154851 25838511.349743
+210	404756 1992 238324 714604 85 165 81 523.4 1023.4 62741.82341019 52819968.635651
+vector 403 highwayNetwork.node[80].veinsmobility acceleration ETV
+vector 404 highwayNetwork.node[80].veinsmobility co2emission ETV
+286	406879 1420 413984 721678 117 166 50 -2.0113469482645 26.562627381352 444.67265918612 6794.3035308758
+285	408299 1541 413984 721678 117 166 50 -4.5 2.5762392523466 17.719994406607 333.83802100503
+284	409840 1577 408720 721678 116 166 51 1.0356996047311 35.475722269388 968.94617369861 23428.0123712
+281	411417 1358 403799 721678 115 166 52 30.1 520.2 19437.895913246 9120185.6378842
+280	412775 1365 403799 721678 115 166 52 540.73382630139 1020.2 48176.433288705 45776141.679958
+vector 405 highwayNetwork.node[81].veinsmobility posx ETV
+vector 406 highwayNetwork.node[81].veinsmobility posy ETV
+vector 407 highwayNetwork.node[82].veinsmobility posx ETV
+vector 408 highwayNetwork.node[82].veinsmobility posy ETV
+294	414372 1377 430102 727989 120 167 48 0.52539671505071 23.863166252665 464.65318490327 7181.3270875692
+293	415749 1462 430102 727989 120 167 48 -4.5 2.5592913716799 29.183671838604 285.84735603707
+292	417211 1517 424840 727989 119 167 49 0.30006499790525 35.538522169243 972.81027163546 24299.696174719
+289	418728 1325 419243 727989 118 167 50 30.1 523.4 18028.701877327 8389454.5034058
+288	420053 1295 419243 727989 118 167 50 542.02972836454 1023.4 46806.588584504 44816664.69394
+vector 409 highwayNetwork.node[81].veinsmobility speed ETV
+vector 410 highwayNetwork.node[82].veinsmobility speed ETV
+179	421466 2799 154983 734666 69 168 100 -0.65340766725965 24.302128770459 823.40160061692 11562.774323411
+178	424265 3050 154983 734666 69 168 100 -4.5 2.5965631975792 25.403157157456 577.32551673352
+177	427315 3088 149340 734666 68 168 101 1.8484004979953 35.588464991122 1978.5301904359 47527.673750983
+176	430403 2654 143693 734666 67 168 102 30.1 1023.4 63459.649512141 49441757.178618
+175	433057 2634 143693 734666 67 168 102 33.829809564143 1023.4 69090.132315699 55323687.608486
+291	435691 1468 419243 734666 118 168 51 0.24541121089398 26.311190317275 379.26459850105 5005.5388882536
+290	437159 1607 419243 734666 118 168 51 -4.4696701475574 2.5424618491204 21.456382142635 238.18557017215
+287	438766 1600 413984 734666 117 168 52 2.1597171262139 36.039259061217 982.37934786109 22178.600703616
+283	440366 1394 408720 734666 116 168 53 530.1 1020.2 46652.564378176 42875640.881409
+282	441760 1370 408720 734666 116 168 53 27.300652138909 520.2 22061.274036376 10423878.547993
+vector 411 highwayNetwork.node[81].veinsmobility acceleration ETV
+vector 412 highwayNetwork.node[81].veinsmobility co2emission ETV
+vector 413 highwayNetwork.node[82].veinsmobility acceleration ETV
+vector 414 highwayNetwork.node[82].veinsmobility co2emission ETV
+229	443392 2206 263627 740955 90 169 80 0.973 25.106190492429 662.56503879808 9734.2333781472
+228	445598 2420 263627 740955 90 169 80 -4.5 2.5690082513262 5.8851130981675 544.75169376974
+224	448018 2490 258372 740955 89 169 81 2.1467230478302 35.419171748855 1473.0785585028 34491.896488605
+221	450508 2238 253110 740955 88 169 82 30.1 1010.8185585028 41235.027384092 25702391.746232
+220	452746 2025 253110 740955 88 169 82 523.4 1020.2 63757.403013548 53800271.981573
+vector 415 highwayNetwork.node[83].veinsmobility posx ETV
+vector 416 highwayNetwork.node[83].veinsmobility posy ETV
+vector 417 highwayNetwork.node[84].veinsmobility posx ETV
+vector 418 highwayNetwork.node[84].veinsmobility posy ETV
+vector 419 highwayNetwork.node[83].veinsmobility speed ETV
+vector 420 highwayNetwork.node[84].veinsmobility speed ETV
+242	455121 2186 280169 752503 93 171 79 0.973 24.632165752028 647.01173212046 9195.3598190072
+241	457307 2404 280169 752503 93 171 79 -4.5 2.5364214228932 13.552597400767 484.10356006616
+239	459711 2461 274533 752503 92 171 80 2.291223445232 35.201674451257 1473.0753392712 34117.16693547
+233	462172 2203 268897 752503 91 171 81 30.1 1005.6553392712 40178.140580096 24593544.088523
+232	464375 2014 268897 752503 91 171 81 523.4 1023.4 62961.978346048 53113378.311856
+vector 421 highwayNetwork.node[83].veinsmobility acceleration ETV
+vector 422 highwayNetwork.node[83].veinsmobility co2emission ETV
+vector 423 highwayNetwork.node[84].veinsmobility acceleration ETV
+vector 424 highwayNetwork.node[84].veinsmobility co2emission ETV
+302	466651 1406 449856 758453 124 172 49 0.91851119570915 27.874366650868 396.86134900995 5353.6802006193
+301	468057 1504 449856 758453 124 172 49 -4.5 2.4740871964954 25.847915382536 227.89447206469
+299	469561 1545 444920 758453 123 172 50 2.143422445585 35.374151546601 974.16206413293 23236.439959326
+296	471106 1363 439981 758453 122 172 51 530.1 1023.4 44821.548602408 41168564.260255
+295	472469 1316 439981 758453 122 172 51 40.677935867066 523.4 21979.515576691 10508352.124151
+vector 425 highwayNetwork.node[85].veinsmobility posx ETV
+vector 426 highwayNetwork.node[85].veinsmobility posy ETV
+vector 427 highwayNetwork.node[85].veinsmobility speed ETV
+238	473960 2349 274533 769632 92 174 83 0.973 23.971863396934 551.03865333204 6836.8304611383
+237	476309 2566 274533 769632 92 174 83 -4.5 2.5671568737831 19.224583779697 403.21745266687
+236	478875 2589 268897 769632 91 174 84 1.5672558522309 34.865123828221 1469.2564344703 32437.953130754
+227	481464 2101 263627 769632 90 174 85 520.2 1020.2 65274.633358591 54572139.732432
+226	483565 2345 263627 769632 90 174 85 41.763565529747 1013.5 45835.755552141 29350492.962266
+vector 428 highwayNetwork.node[86].veinsmobility posx ETV
+vector 429 highwayNetwork.node[86].veinsmobility posy ETV
+vector 430 highwayNetwork.node[85].veinsmobility acceleration ETV
+vector 431 highwayNetwork.node[85].veinsmobility co2emission ETV
+vector 432 highwayNetwork.node[87].veinsmobility posx ETV
+vector 433 highwayNetwork.node[87].veinsmobility posy ETV
+vector 434 highwayNetwork.node[86].veinsmobility speed ETV
+vector 435 highwayNetwork.node[86].veinsmobility acceleration ETV
+vector 436 highwayNetwork.node[86].veinsmobility co2emission ETV
+vector 437 highwayNetwork.node[87].veinsmobility speed ETV
+vector 438 highwayNetwork.node[87].veinsmobility acceleration ETV
+vector 439 highwayNetwork.node[87].veinsmobility co2emission ETV
+264	486653 2079 349864 792829 105 178 74 0.973 28.643502481572 704.978305734 11508.080011286
+263	488732 2242 349864 792829 105 178 74 -4.5 2.5867336850148 24.418864778139 500.91166215154
+262	490974 2322 344247 792829 104 178 75 1.8536020794418 36.592524466547 1475.9250250552 36305.903639893
+261	493296 2101 338623 792829 103 178 76 30.1 1008.5050250552 36528.510634587 21979887.954856
+260	495397 1882 338623 792829 103 178 76 523.4 1023.4 59988.385296418 51250141.659481
+vector 440 highwayNetwork.node[88].veinsmobility posx ETV
+vector 441 highwayNetwork.node[88].veinsmobility posy ETV
+vector 442 highwayNetwork.node[88].veinsmobility speed ETV
+324	497454 1341 499134 804775 133 180 48 0.973 28.872071037374 469.84432262281 7738.0687452137
+323	498795 1452 499134 804775 133 180 48 -4.5 2.5894838582259 17.971890359455 340.82207865614
+322	500247 1514 493172 804775 132 180 49 1.8465263789054 36.919303556793 979.84432630617 24017.258006161
+321	501761 1304 487208 804775 131 180 50 30.1 523.4 18747.811518922 8794124.1972059
+320	503065 1315 487208 804775 131 180 50 534.99567369383 1023.4 46232.60284831 43906078.4099
+vector 443 highwayNetwork.node[89].veinsmobility posx ETV
+vector 444 highwayNetwork.node[89].veinsmobility posy ETV
+vector 445 highwayNetwork.node[88].veinsmobility acceleration ETV
+vector 446 highwayNetwork.node[88].veinsmobility co2emission ETV
+vector 447 highwayNetwork.node[90].veinsmobility posx ETV
+vector 448 highwayNetwork.node[90].veinsmobility posy ETV
+vector 449 highwayNetwork.node[89].veinsmobility speed ETV
+vector 450 highwayNetwork.node[89].veinsmobility acceleration ETV
+vector 451 highwayNetwork.node[89].veinsmobility co2emission ETV
+vector 452 highwayNetwork.node[90].veinsmobility speed ETV
+vector 453 highwayNetwork.node[91].veinsmobility posx ETV
+vector 454 highwayNetwork.node[91].veinsmobility posy ETV
+vector 455 highwayNetwork.node[90].veinsmobility acceleration ETV
+vector 456 highwayNetwork.node[90].veinsmobility co2emission ETV
+396	505239 670 692516 829364 162 184 23 0.973 26.974552661745 227.09701023045 3238.6322037548
+395	505909 704 692516 829364 162 184 23 -4.5 2.5073445170652 17.861329119692 137.55671299
+394	506613 743 685017 829364 161 184 24 1.7705543897348 34.743951822949 476.92840571722 11707.336379509
+389	507356 760 677896 829364 160 184 25 530.1 1007.0284057172 17954.368111956 13542111.104954
+388	508116 525 677896 829364 160 184 25 520.2 520.2 13005 6765201
+vector 457 highwayNetwork.node[92].veinsmobility posx ETV
+vector 458 highwayNetwork.node[92].veinsmobility posy ETV
+vector 459 highwayNetwork.node[91].veinsmobility speed ETV
+209	508816 2856 233411 836074 84 185 102 -1.9252911648457 26.535808382061 822.10486146828 11361.783621179
+208	511672 3070 233411 836074 84 185 102 -4.5 2.5863475421211 23.300375131612 598.57082486939
+205	514742 3163 228489 836074 83 185 103 1.9790526357479 35.724530581465 1985.5524732295 46742.877159589
+203	517905 2708 223566 836074 82 185 104 30.1 1023.4 65113.073718816 50999465.433763
+202	520613 2717 223566 836074 82 185 104 26.807526770512 1020.2 69511.480644749 55375636.462746
+vector 460 highwayNetwork.node[91].veinsmobility acceleration ETV
+vector 461 highwayNetwork.node[91].veinsmobility co2emission ETV
+vector 462 highwayNetwork.node[92].veinsmobility speed ETV
+vector 463 highwayNetwork.node[93].veinsmobility posx ETV
+vector 464 highwayNetwork.node[93].veinsmobility posy ETV
+vector 465 highwayNetwork.node[92].veinsmobility acceleration ETV
+vector 466 highwayNetwork.node[92].veinsmobility co2emission ETV
+vector 467 highwayNetwork.node[94].veinsmobility posx ETV
+vector 468 highwayNetwork.node[94].veinsmobility posy ETV
+vector 469 highwayNetwork.node[93].veinsmobility speed ETV
+vector 470 highwayNetwork.node[93].veinsmobility acceleration ETV
+vector 471 highwayNetwork.node[93].veinsmobility co2emission ETV
+vector 472 highwayNetwork.node[94].veinsmobility speed ETV
+vector 473 highwayNetwork.node[94].veinsmobility acceleration ETV
+vector 474 highwayNetwork.node[94].veinsmobility co2emission ETV
+199	524263 3062 218626 870014 81 190 110 0.93369959509334 24.676938806643 784.41705098779 10521.292128149
+198	527325 3383 218626 870014 81 190 110 -4.5 2.5911428306717 19.716689022517 597.42796245108
+197	530708 3410 213344 870014 80 190 111 1.5825940504206 35.438365100383 1969.866553655 44722.636842885
+196	534118 2942 208062 870014 79 190 112 30.1 1023.4 70949.226504185 55883012.568822
+195	537060 2925 208062 870014 79 190 112 42.493446344982 1023.4 74712.199884852 59378874.104575
+351	539985 1377 561199 870014 143 190 48 0.973 21.832535931555 424.05494514236 5602.2732943725
+350	541362 1479 561199 870014 143 190 48 -4.5 2.5354937830474 28.653683217189 242.30565234333
+347	542841 1517 554453 870014 142 190 49 1.9354287577793 34.594224006502 974.81884230136 23411.83147925
+343	544358 1338 547708 870014 141 190 50 530.1 1023.4 43665.850347132 39893329.774396
+342	545696 1277 547708 870014 141 190 50 40.02115769864 523.4 21638.104059569 10376749.112653
+vector 475 highwayNetwork.node[95].veinsmobility posx ETV
+vector 476 highwayNetwork.node[95].veinsmobility posy ETV
+vector 477 highwayNetwork.node[95].veinsmobility speed ETV
+vector 478 highwayNetwork.node[96].veinsmobility posx ETV
+vector 479 highwayNetwork.node[96].veinsmobility posy ETV
+vector 480 highwayNetwork.node[95].veinsmobility acceleration ETV
+vector 481 highwayNetwork.node[95].veinsmobility co2emission ETV
+vector 482 highwayNetwork.node[97].veinsmobility posx ETV
+vector 483 highwayNetwork.node[97].veinsmobility posy ETV
+vector 484 highwayNetwork.node[96].veinsmobility speed ETV
+361	547570 1382 588981 897683 147 194 48 0.14859415397427 26.377208819638 436.58742819503 6535.4276108405
+360	548952 1488 588981 897683 147 194 48 -4.5 2.5998617830686 30.850671465889 234.33818546044
+359	550440 1513 581851 897683 146 194 49 2.3025829756167 34.927294047247 982.75244177677 24466.111140021
+354	551953 1339 575089 897683 145 194 50 530.1 1023.4 43259.179585916 39223827.608966
+353	553292 1270 575089 897683 145 194 50 26.927558223228 520.2 21722.751132528 10442069.176651
+vector 485 highwayNetwork.node[96].veinsmobility acceleration ETV
+vector 486 highwayNetwork.node[96].veinsmobility co2emission ETV
+vector 487 highwayNetwork.node[97].veinsmobility speed ETV
+vector 488 highwayNetwork.node[97].veinsmobility acceleration ETV
+vector 489 highwayNetwork.node[97].veinsmobility co2emission ETV
+371	554883 1366 611248 912327 150 196 47 0.973 24.103963059719 441.08027699813 6280.6533333403
+370	556249 1437 611248 912327 150 196 47 -4.5 2.5570422567893 32.85382607579 221.65846300374
+369	557686 1482 603676 912327 149 196 48 1.8186325347517 34.672458610542 987.28307673589 24821.25909437
+364	559168 1318 596118 912327 148 196 49 530.1 1023.4 42408.936212004 38463249.964021
+363	560486 1247 596118 912327 148 196 49 27.556923264115 523.4 21374.604891089 10308928.589075
+vector 490 highwayNetwork.node[98].veinsmobility posx ETV
+vector 491 highwayNetwork.node[98].veinsmobility posy ETV
+304	561849 2046 449856 919450 124 197 74 0.66237526540269 28.52984724824 644.52466583121 9740.7511179531
+303	563895 2218 449856 919450 124 197 74 -4.5 2.5938591533806 6.6997296751148 525.71296224516
+300	566113 2315 444920 919450 123 197 75 1.5349992589559 36.258678273903 1473.0031736892 35684.172511174
+298	568428 2090 439981 919450 122 197 76 30.1 1010.7431736892 37898.557783348 23769489.440139
+297	570518 1859 439981 919450 122 197 76 523.4 1020.2 59706.315304445 50810698.426846
+vector 492 highwayNetwork.node[98].veinsmobility speed ETV
+vector 493 highwayNetwork.node[98].veinsmobility acceleration ETV
+vector 494 highwayNetwork.node[98].veinsmobility co2emission ETV
+vector 495 highwayNetwork.node[99].veinsmobility posx ETV
+vector 496 highwayNetwork.node[99].veinsmobility posy ETV
+vector 497 highwayNetwork.node[100].veinsmobility posx ETV
+vector 498 highwayNetwork.node[100].veinsmobility posy ETV
+374	572801 1397 618817 940059 151 200 50 -1.3263078967641 26.148099208646 438.95985270927 6679.062084498
+373	574198 1525 618817 940059 151 200 50 -4.5 2.5756382055581 9.5465315112563 339.53171462791
+372	575723 1573 611248 940059 150 200 51 1.6606586153153 36.380517466501 989.46007265111 23528.375409987
+368	577296 1358 603676 940059 149 200 52 30.1 523.4 19378.434606063 9089076.8859375
+367	578654 1367 603676 940059 149 200 52 525.37992734889 1023.4 47265.216627337 44411238.870479
+vector 499 highwayNetwork.node[99].veinsmobility speed ETV
+vector 500 highwayNetwork.node[100].veinsmobility speed ETV
+vector 501 highwayNetwork.node[99].veinsmobility acceleration ETV
+vector 502 highwayNetwork.node[99].veinsmobility co2emission ETV
+vector 503 highwayNetwork.node[100].veinsmobility acceleration ETV
+vector 504 highwayNetwork.node[100].veinsmobility co2emission ETV
+254	580404 2909 315737 954691 99 202 104 -0.10263959715821 26.406563356743 805.63639762609 10922.466224225
+253	583313 3190 315737 954691 99 202 104 -4.5 2.5854298011167 24.093619596307 573.12913094509
+252	586503 3242 309753 954691 98 202 105 2.389802970955 35.661953832544 1965.286264634 45753.160441651
+251	589745 2792 303760 954691 97 202 106 30.1 1020.2 66512.630342865 51977704.17352
+250	592537 2764 303760 954691 97 202 106 41.913735365997 1023.4 71099.144011153 56278363.639878
+vector 505 highwayNetwork.node[101].veinsmobility posx ETV
+vector 506 highwayNetwork.node[101].veinsmobility posy ETV
+vector 507 highwayNetwork.node[101].veinsmobility speed ETV
+269	595479 2713 366667 968918 108 204 97 0.973 26.720450700323 883.01871384856 13373.639702471
+268	598192 2975 366667 968918 108 204 97 -4.5 2.5945852456847 33.038218955007 560.23036356815
+267	601167 3024 361078 968918 107 204 98 2.2034376952564 35.394169643422 1977.2753133311 48859.292767215
+266	604191 2614 355480 968918 106 204 99 30.1 1023.4 60755.702346908 46846546.131209
+265	606805 2583 355480 968918 106 204 99 35.084686668937 1020.2 67821.578622783 54397552.626397
+vector 508 highwayNetwork.node[101].veinsmobility acceleration ETV
+vector 509 highwayNetwork.node[101].veinsmobility co2emission ETV
+vector 510 highwayNetwork.node[102].veinsmobility posx ETV
+vector 511 highwayNetwork.node[102].veinsmobility posy ETV
+vector 512 highwayNetwork.node[102].veinsmobility speed ETV
+329	609699 2058 516689 989885 136 207 72 0.087549544221982 29.455682197605 728.65527966623 12365.956615486
+328	611757 2199 516689 989885 136 207 72 -4.5 2.5965891187778 38.386478072454 464.49861252562
+327	613956 2256 510734 989885 135 207 73 1.9117558139144 41.226161506496 1467.0224607635 37921.133515895
+326	616212 2028 504763 989885 134 207 74 30.1 1004.7624607635 34924.499851928 20308933.778076
+325	618240 1845 504763 989885 134 207 74 523.4 1020.2 59487.219936132 51520398.877466
+451	620085 694 823043 989885 183 207 25 0.973 25.552758570025 210.31346727777 2979.2907960621
+450	620779 773 823043 989885 183 207 25 -4.5 2.5246652484406 6.2149585148695 162.03236456467
+449	621552 802 816720 989885 182 207 26 1.7294088285416 34.104061597803 481.52061107962 11182.036484806
+444	622354 826 810754 989885 181 207 27 530.1 1011.6206110796 20065.887864639 15700938.617973
+443	623180 567 810754 989885 181 207 27 520.2 520.2 14045.4 7306417.08
+vector 513 highwayNetwork.node[102].veinsmobility acceleration ETV
+vector 514 highwayNetwork.node[102].veinsmobility co2emission ETV
+vector 515 highwayNetwork.node[103].veinsmobility posx ETV
+vector 516 highwayNetwork.node[103].veinsmobility posy ETV
+336	623998 2029 534642 1003345 139 209 71 0.973 31.277543175409 731.11783013676 11765.171019495
+335	626027 2159 534642 1003345 139 209 71 -4.5 2.5705854617758 40.503071429773 421.32442038954
+334	628186 2223 528291 1003345 138 209 72 1.5568241029978 42.059895532771 1473.4012993804 37667.342951675
+331	630409 1996 522309 1003345 137 209 73 30.1 1000.8212993804 34367.437537974 20004860.112286
+330	632405 1829 522309 1003345 137 209 73 520.2 1023.4 58354.518040221 50306097.895951
+391	634234 1415 677896 1003345 160 209 50 0.973 26.490278804321 448.30827674118 6885.31204328
+390	635649 1514 677896 1003345 160 209 50 -4.5 2.5621091317851 16.522425832382 333.01197002311
+387	637163 1580 671174 1003345 159 209 51 2.5929864478065 35.926889538511 975.5309413634 23437.463521788
+386	638743 1359 664450 1003345 158 209 52 30.1 520.2 19480.743689219 9113563.0010942
+385	640102 1366 664450 1003345 158 209 52 534.1490586366 1020.2 48122.556829292 45705458.927547
+399	641468 1325 700024 1003345 163 209 47 0.973 30.443064151016 469.09624278832 7743.8167294084
+398	642793 1420 700024 1003345 163 209 47 -4.5 2.5698525264859 18.147562770989 335.15218719412
+397	644213 1485 692516 1003345 162 209 48 2.0151501513552 36.955606907792 973.50030078434 24043.926203994
+393	645698 1277 685017 1003345 161 209 49 30.1 523.4 18467.667176019 8692024.458739
+392	646975 1291 685017 1003345 161 209 49 541.33969921566 1023.4 45317.339421655 42993994.08397
+461	648266 683 842765 1003345 186 209 24 0.973 25.228710624356 226.39353068421 3422.3912103006
+460	648949 748 842765 1003345 186 209 24 -4.427322301854 2.5824133628747 14.357562296138 152.00870513217
+459	649697 769 836074 1003345 185 209 25 1.8928146136925 34.94777442088 478.00751395064 11188.092360309
+454	650466 792 829364 1003345 184 209 26 530.1 1008.1075139506 19004.1615523 14596404.655833
+453	651258 547 829364 1003345 184 209 26 520.2 520.2 13525.2 7035809.04
+vector 517 highwayNetwork.node[104].veinsmobility posx ETV
+vector 518 highwayNetwork.node[104].veinsmobility posy ETV
+vector 519 highwayNetwork.node[103].veinsmobility speed ETV
+471	651983 651 862920 1010058 189 210 22 0.973 22.473332800308 234.20291925568 3606.0401851594
+470	652634 664 862920 1010058 189 210 22 -4.5 2.5872990307165 23.89288192475 122.93035291053
+469	653298 715 855818 1010058 188 210 23 2.0156307866564 34.046325566294 465.17145556011 11448.895751947
+464	654013 733 849097 1010058 187 210 24 530.1 995.27145556011 17068.430273066 12706810.200551
+463	654746 506 849097 1010058 187 210 24 520.2 523.4 12494.4 6504611.52
+vector 520 highwayNetwork.node[103].veinsmobility acceleration ETV
+vector 521 highwayNetwork.node[103].veinsmobility co2emission ETV
+vector 522 highwayNetwork.node[104].veinsmobility speed ETV
+vector 523 highwayNetwork.node[105].veinsmobility posx ETV
+vector 524 highwayNetwork.node[105].veinsmobility posy ETV
+vector 525 highwayNetwork.node[104].veinsmobility acceleration ETV
+vector 526 highwayNetwork.node[104].veinsmobility co2emission ETV
+274	655696 2864 383111 1020906 111 212 102 0.76822472607922 26.840360527363 828.62109577481 11774.351245394
+273	658560 3083 383111 1020906 111 212 102 -4.5 2.5960166407283 22.456925943199 626.94967716919
+272	661643 3187 377513 1020906 110 212 103 1.5952372446656 36.314261898492 1969.5966987878 46533.979781016
+271	664830 2743 371924 1020906 109 212 104 30.1 1023.4 64930.353844135 50638499.525351
+270	667573 2741 371924 1020906 109 212 104 42.763301212199 1023.4 69934.221719891 55807933.26581
+vector 527 highwayNetwork.node[105].veinsmobility speed ETV
+vector 528 highwayNetwork.node[105].veinsmobility acceleration ETV
+vector 529 highwayNetwork.node[105].veinsmobility co2emission ETV
+414	670507 1320 740955 1031741 169 214 46 -0.011922814172545 29.48294353154 419.03736850419 6596.5185773336
+413	671827 1426 740955 1031741 169 214 46 -4.5 2.5768806348555 25.60889278202 252.61773311814
+410	673253 1459 734666 1031741 168 214 47 2.4307717913529 37.019500379683 977.47724462075 24259.847041388
+408	674712 1284 727989 1031741 167 214 48 530.1 1023.4 41994.676320246 38430287.395755
+407	675996 1244 727989 1031741 167 214 48 37.362755379246 523.4 20501.177062216 9799001.49519
+vector 530 highwayNetwork.node[106].veinsmobility posx ETV
+vector 531 highwayNetwork.node[106].veinsmobility posy ETV
+vector 532 highwayNetwork.node[106].veinsmobility speed ETV
+vector 533 highwayNetwork.node[107].veinsmobility posx ETV
+vector 534 highwayNetwork.node[107].veinsmobility posy ETV
+vector 535 highwayNetwork.node[106].veinsmobility acceleration ETV
+vector 536 highwayNetwork.node[106].veinsmobility co2emission ETV
+424	677669 1352 758453 1047484 172 217 46 -0.73946209920838 24.765999991184 417.66846560003 5794.3061536844
+423	679021 1442 758453 1047484 172 217 46 -4.5 2.5457408397226 29.289744466089 231.34277438606
+420	680463 1459 752503 1047484 171 217 47 1.4579939683434 35.525302314898 964.72151419022 24036.708098198
+418	681922 1298 746548 1047484 170 217 48 530.1 1023.4 41583.115779742 37768699.25298
+417	683220 1234 746548 1047484 170 217 48 50.118485809781 523.4 20926.987717762 10043637.673061
+vector 537 highwayNetwork.node[108].veinsmobility posx ETV
+vector 538 highwayNetwork.node[108].veinsmobility posy ETV
+vector 539 highwayNetwork.node[107].veinsmobility speed ETV
+vector 540 highwayNetwork.node[107].veinsmobility acceleration ETV
+vector 541 highwayNetwork.node[107].veinsmobility co2emission ETV
+vector 542 highwayNetwork.node[108].veinsmobility speed ETV
+vector 543 highwayNetwork.node[108].veinsmobility acceleration ETV
+vector 544 highwayNetwork.node[108].veinsmobility co2emission ETV
+vector 545 highwayNetwork.node[109].veinsmobility posx ETV
+vector 546 highwayNetwork.node[109].veinsmobility posy ETV
+vector 547 highwayNetwork.node[109].veinsmobility speed ETV
+vector 548 highwayNetwork.node[110].veinsmobility posx ETV
+vector 549 highwayNetwork.node[110].veinsmobility posy ETV
+vector 550 highwayNetwork.node[109].veinsmobility acceleration ETV
+vector 551 highwayNetwork.node[109].veinsmobility co2emission ETV
+vector 552 highwayNetwork.node[111].veinsmobility posx ETV
+vector 553 highwayNetwork.node[111].veinsmobility posy ETV
+vector 554 highwayNetwork.node[110].veinsmobility speed ETV
+314	685565 2772 465061 1088158 127 224 98 -1.0074014059768 26.010704320161 863.40622851432 12725.582554506
+313	688337 2982 465061 1088158 127 224 98 -4.5 2.5584610845661 30.819132375299 592.98383172585
+310	691319 3072 459772 1088158 126 224 99 1.7269091144204 35.634245005921 1966.0204678104 47806.28269797
+308	694391 2662 454481 1088158 125 224 100 30.1 1023.4 61336.124010282 47284175.575087
+307	697053 2619 454481 1088158 125 224 100 46.339532189629 1023.4 68621.184039391 55050810.384381
+vector 555 highwayNetwork.node[110].veinsmobility acceleration ETV
+vector 556 highwayNetwork.node[110].veinsmobility co2emission ETV
+vector 557 highwayNetwork.node[111].veinsmobility speed ETV
+vector 558 highwayNetwork.node[112].veinsmobility posx ETV
+vector 559 highwayNetwork.node[112].veinsmobility posy ETV
+vector 560 highwayNetwork.node[111].veinsmobility acceleration ETV
+vector 561 highwayNetwork.node[111].veinsmobility co2emission ETV
+436	700116 1433 786851 1101203 177 226 50 0.973 27.267735191159 382.1997482568 4996.8431287941
+435	701549 1576 786851 1101203 177 226 50 -4.5 2.4284381376812 23.530794566288 229.4922798733
+434	703125 1596 780872 1101203 176 226 51 1.9308071281528 35.124636710668 971.37620002587 22385.486748874
+429	704721 1395 775238 1101203 175 226 52 530.1 1020.2 45747.384813318 42016997.232179
+428	706116 1357 775238 1101203 175 226 52 38.303799974132 520.2 22064.08827221 10476187.689023
+vector 562 highwayNetwork.node[113].veinsmobility posx ETV
+vector 563 highwayNetwork.node[113].veinsmobility posy ETV
+vector 564 highwayNetwork.node[112].veinsmobility speed ETV
+439	707651 1385 792829 1107937 178 227 50 0.973 28.750763562938 444.9590419963 7186.2326091735
+438	709036 1531 792829 1107937 178 227 50 -4.5 2.4436417083489 2.4685450730212 357.84627368457
+437	710567 1588 786851 1107937 177 227 51 2.036075304402 36.509326827407 983.3951259253 23708.286063371
+433	712155 1369 780872 1107937 176 227 52 30.1 523.4 19629.822919867 9250489.5142032
+432	713524 1396 780872 1107937 176 227 52 531.4448740747 1023.4 46975.877638592 43958424.559577
+vector 565 highwayNetwork.node[112].veinsmobility acceleration ETV
+vector 566 highwayNetwork.node[112].veinsmobility co2emission ETV
+vector 567 highwayNetwork.node[113].veinsmobility speed ETV
+319	715113 2799 481594 1114679 130 228 99 0.973 27.759958542276 848.8177611944 12376.89670104
+318	717912 3060 481594 1114679 130 228 99 -4.5 2.5800692600897 26.609920812588 590.90335811475
+317	720972 3104 475972 1114679 129 228 100 1.895056557795 37.176905919921 1981.8967442419 47430.889781623
+316	724076 2681 470342 1114679 128 228 101 30.1 1020.2 63457.850373547 49651106.422677
+315	726757 2652 470342 1114679 128 228 101 25.303255758055 1020.2 67531.524657545 53632628.418971
+379	729409 2079 638295 1114679 154 228 75 0.973 24.274396550235 648.18941439412 9466.7020992897
+378	731488 2297 638295 1114679 154 228 75 -4.5 2.5748483025935 14.835364845656 483.68575468374
+377	733785 2368 631934 1114679 153 228 76 2.1828892799327 34.841302267648 1483.6607773585 35376.505694765
+376	736153 2140 625198 1114679 152 228 77 30.1 1016.2407773585 38305.676273873 23871580.902069
+375	738293 1919 625198 1114679 152 228 77 520.2 1020.2 60237.598064222 51081391.756712
+vector 568 highwayNetwork.node[113].veinsmobility acceleration ETV
+vector 569 highwayNetwork.node[113].veinsmobility co2emission ETV
+vector 570 highwayNetwork.node[114].veinsmobility posx ETV
+vector 571 highwayNetwork.node[114].veinsmobility posy ETV
+456	740463 1373 829364 1126692 184 230 47 0.973 23.064172889867 454.28309953673 6395.5751693549
+455	741836 1431 829364 1126692 184 230 47 -4.5 2.5914739454631 27.071128934616 275.2878337902
+452	743267 1503 823043 1126692 183 230 48 2.1234770704992 35.071438178071 972.18378254957 23830.589330599
+448	744770 1310 816720 1126692 182 230 49 30.1 523.4 17991.994957293 8394214.4472532
+447	746080 1304 816720 1126692 182 230 49 542.65621745043 1023.4 45630.434793012 43488769.651043
+vector 572 highwayNetwork.node[114].veinsmobility speed ETV
+vector 573 highwayNetwork.node[114].veinsmobility acceleration ETV
+vector 574 highwayNetwork.node[114].veinsmobility co2emission ETV
+vector 575 highwayNetwork.node[115].veinsmobility posx ETV
+vector 576 highwayNetwork.node[115].veinsmobility posy ETV
+vector 577 highwayNetwork.node[116].veinsmobility posx ETV
+vector 578 highwayNetwork.node[116].veinsmobility posy ETV
+vector 579 highwayNetwork.node[115].veinsmobility speed ETV
+vector 580 highwayNetwork.node[116].veinsmobility speed ETV
+vector 581 highwayNetwork.node[115].veinsmobility acceleration ETV
+vector 582 highwayNetwork.node[115].veinsmobility co2emission ETV
+vector 583 highwayNetwork.node[116].veinsmobility acceleration ETV
+vector 584 highwayNetwork.node[116].veinsmobility co2emission ETV
+vector 585 highwayNetwork.node[117].veinsmobility posx ETV
+vector 586 highwayNetwork.node[117].veinsmobility posy ETV
+vector 587 highwayNetwork.node[118].veinsmobility posx ETV
+vector 588 highwayNetwork.node[118].veinsmobility posy ETV
+vector 589 highwayNetwork.node[117].veinsmobility speed ETV
+vector 590 highwayNetwork.node[118].veinsmobility speed ETV
+vector 591 highwayNetwork.node[117].veinsmobility acceleration ETV
+vector 592 highwayNetwork.node[117].veinsmobility co2emission ETV
+vector 593 highwayNetwork.node[118].veinsmobility acceleration ETV
+vector 594 highwayNetwork.node[118].veinsmobility co2emission ETV
+vector 595 highwayNetwork.node[119].veinsmobility posx ETV
+vector 596 highwayNetwork.node[119].veinsmobility posy ETV
+vector 597 highwayNetwork.node[120].veinsmobility posx ETV
+vector 598 highwayNetwork.node[120].veinsmobility posy ETV
+vector 599 highwayNetwork.node[119].veinsmobility speed ETV
+vector 600 highwayNetwork.node[120].veinsmobility speed ETV
+486	749177 1378 905198 1192274 195 240 46 -0.97702612896316 27.983792967313 439.2386245329 6618.2379499163
+485	750555 1439 905198 1192274 195 240 46 -4.5 2.5979548955569 29.65340697651 256.13303900307
+484	751994 1483 897683 1192274 194 240 47 1.929522847617 36.451286070328 978.19908612322 25034.891661902
+479	753477 1320 890558 1192274 193 240 48 530.1 1023.4 41714.041249023 37988557.689055
+478	754797 1254 890558 1192274 193 240 48 36.640913876782 523.4 20817.181229614 10006418.618616
+vector 601 highwayNetwork.node[119].veinsmobility acceleration ETV
+vector 602 highwayNetwork.node[119].veinsmobility co2emission ETV
+vector 603 highwayNetwork.node[120].veinsmobility acceleration ETV
+vector 604 highwayNetwork.node[120].veinsmobility co2emission ETV
+vector 605 highwayNetwork.node[121].veinsmobility posx ETV
+vector 606 highwayNetwork.node[121].veinsmobility posy ETV
+vector 607 highwayNetwork.node[122].veinsmobility posx ETV
+vector 608 highwayNetwork.node[122].veinsmobility posy ETV
+vector 609 highwayNetwork.node[121].veinsmobility speed ETV
+vector 610 highwayNetwork.node[122].veinsmobility speed ETV
+366	756673 2733 596118 1216052 148 243 96 0.88503427217999 27.287004686256 864.95646183643 13113.475838934
+365	759406 2947 596118 1216052 148 243 96 -4.5 2.5449132313253 30.470184673997 570.84265225794
+362	762353 3033 588981 1216052 147 243 97 2.2974776409101 35.819978004019 1962.274516259 48327.408193311
+358	765386 2628 581851 1216052 146 243 98 30.1 1023.4 59992.932604677 46287294.764052
+357	768014 2584 581851 1216052 146 243 98 50.08548374105 1020.2 67289.600056711 53954409.602655
+412	770598 2118 740955 1216052 169 243 75 0.973 26.821410992292 671.33604175976 10250.779393987
+411	772716 2268 740955 1216052 169 243 75 -4.5 2.5509110441664 14.045992042157 539.92516941978
+409	774984 2379 734666 1216052 168 243 76 2.135495949004 35.559271852389 1470.5042559251 35617.436575721
+406	777363 2157 727989 1216052 167 243 77 30.1 1003.0842559251 38000.156621507 23145113.194242
+405	779520 1944 727989 1216052 167 243 77 520.2 1020.2 59740.947914219 50356304.838395
+vector 611 highwayNetwork.node[121].veinsmobility acceleration ETV
+vector 612 highwayNetwork.node[121].veinsmobility co2emission ETV
+vector 613 highwayNetwork.node[122].veinsmobility acceleration ETV
+vector 614 highwayNetwork.node[122].veinsmobility co2emission ETV
+vector 615 highwayNetwork.node[123].veinsmobility posx ETV
+vector 616 highwayNetwork.node[123].veinsmobility posy ETV
+vector 617 highwayNetwork.node[123].veinsmobility speed ETV
+vector 618 highwayNetwork.node[123].veinsmobility acceleration ETV
+vector 619 highwayNetwork.node[123].veinsmobility co2emission ETV
+494	782041 1415 933318 1247747 199 247 49 0.973 25.793912979905 441.6810501681 6574.39504586
+493	783456 1546 933318 1247747 199 247 49 -4.5 2.5895968555706 14.627398842378 315.67174581256
+492	785002 1583 926575 1247747 198 247 50 1.5466859151144 35.266033676403 980.64329576547 23534.0941791
+491	786585 1377 919450 1247747 197 247 51 30.1 523.4 18991.937563101 8895097.4951236
+490	787962 1373 919450 1247747 197 247 51 534.19670423453 1023.4 46994.926095325 44536452.997699
+vector 620 highwayNetwork.node[124].veinsmobility posx ETV
+vector 621 highwayNetwork.node[124].veinsmobility posy ETV
+346	789453 3076 554453 1255666 142 248 107 0.13908726293843 24.210195961234 800.45403520928 10420.377531491
+345	792529 3382 554453 1255666 142 248 107 -4.5 2.5706948172767 21.937519958753 601.27041202998
+344	795911 3373 547708 1255666 141 248 108 1.9035544909537 35.399286154013 1970.0699749533 45289.938794529
+339	799284 2910 540994 1255666 140 248 109 30.1 1020.2 69313.527739865 54476498.249505
+338	802194 2896 540994 1255666 140 248 109 31.970025046703 1020.2 72524.83440672 57492425.260146
+vector 622 highwayNetwork.node[125].veinsmobility posx ETV
+vector 623 highwayNetwork.node[125].veinsmobility posy ETV
+vector 624 highwayNetwork.node[124].veinsmobility speed ETV
+356	805268 2968 575089 1263555 145 249 105 0.9545771213989 26.009777800564 815.22676418224 11067.738070849
+355	808236 3284 575089 1263555 145 249 105 -4.5 2.5702357560862 24.493952054994 565.69287610418
+352	811520 3311 568332 1263555 144 249 106 1.9284635250922 35.47824289091 1983.5991358735 45992.065009725
+349	814831 2876 561199 1263555 143 249 107 30.1 1023.4 67235.67263935 52504536.053787
+348	817707 2846 561199 1263555 143 249 107 28.760864126519 1023.4 71461.856247106 56540475.887657
+vector 625 highwayNetwork.node[124].veinsmobility acceleration ETV
+vector 626 highwayNetwork.node[124].veinsmobility co2emission ETV
+vector 627 highwayNetwork.node[125].veinsmobility speed ETV
+431	820746 2144 775238 1271470 175 250 76 0.973 24.350133540804 669.18769856057 10263.093723851
+430	822890 2367 775238 1271470 175 250 76 -4.5 2.5751558480086 10.726345555788 525.57387305456
+427	825257 2417 769632 1271470 174 250 77 1.4582556831883 35.595117288142 1480.1702197401 35588.74037142
+426	827674 2183 764043 1271470 173 250 78 30.1 1017.9102197401 38790.290833599 24246240.188773
+425	829857 1966 764043 1271470 173 250 78 523.4 1020.2 61193.123376786 51999967.100526
+vector 628 highwayNetwork.node[126].veinsmobility posx ETV
+vector 629 highwayNetwork.node[126].veinsmobility posy ETV
+vector 630 highwayNetwork.node[125].veinsmobility acceleration ETV
+vector 631 highwayNetwork.node[125].veinsmobility co2emission ETV
+vector 632 highwayNetwork.node[126].veinsmobility speed ETV
+509	832134 1399 976031 1286510 205 252 48 0.973 26.520278357565 436.88358222605 6599.2217040355
+508	833533 1531 976031 1286510 205 252 48 -4.5 2.5890711884713 18.016536603941 283.55468019357
+507	835064 1562 968918 1286510 204 252 49 2.1155210925499 35.148142082109 980.01700596948 23642.414338518
+506	836626 1360 961801 1286510 203 252 50 30.1 523.4 18252.460128862 8491401.5183054
+505	837986 1347 961801 1286510 203 252 50 534.82299403052 1023.4 46294.104943624 43990520.307498
+504	839333 1515 954691 1286510 202 252 51 0.15298762287516 23.279505159501 364.15683883376 4484.2006035777
+503	840848 1622 954691 1286510 202 252 51 -4.5 2.5700376152061 23.492024652194 214.98118482702
+500	842470 1649 947584 1286510 201 252 52 1.9008178378455 33.505236055492 972.62180214501 22261.151279272
+498	844119 1460 940059 1286510 200 252 53 530.1 1020.2 46445.253193872 42529193.527378
+497	845579 1400 940059 1286510 200 252 53 37.058197854988 523.4 22669.132145021 10833669.021785
+vector 633 highwayNetwork.node[127].veinsmobility posx ETV
+vector 634 highwayNetwork.node[127].veinsmobility posy ETV
+vector 635 highwayNetwork.node[126].veinsmobility acceleration ETV
+vector 636 highwayNetwork.node[126].veinsmobility co2emission ETV
+384	847230 2788 658091 1294020 157 253 97 -0.15237763954575 23.264757242056 841.10933809618 11860.044125015
+383	850018 2994 658091 1294020 157 253 97 -4.5 2.5620007993421 29.870496461471 579.81010549746
+382	853012 3063 651370 1294020 156 253 98 1.8404730485287 35.283049297333 1978.0903413244 48418.619016388
+381	856075 2672 644649 1294020 155 253 99 30.1 1023.4 60656.636538989 46797902.36711
+380	858747 2626 644649 1294020 155 253 99 34.269658675628 1023.4 67684.376238012 54364510.083009
+vector 637 highwayNetwork.node[128].veinsmobility posx ETV
+vector 638 highwayNetwork.node[128].veinsmobility posy ETV
+vector 639 highwayNetwork.node[127].veinsmobility speed ETV
+vector 640 highwayNetwork.node[127].veinsmobility acceleration ETV
+vector 641 highwayNetwork.node[127].veinsmobility co2emission ETV
+vector 642 highwayNetwork.node[128].veinsmobility speed ETV
+vector 643 highwayNetwork.node[129].veinsmobility posx ETV
+vector 644 highwayNetwork.node[129].veinsmobility posy ETV
+vector 645 highwayNetwork.node[128].veinsmobility acceleration ETV
+vector 646 highwayNetwork.node[128].veinsmobility co2emission ETV
+vector 647 highwayNetwork.node[130].veinsmobility posx ETV
+vector 648 highwayNetwork.node[130].veinsmobility posy ETV
+vector 649 highwayNetwork.node[129].veinsmobility speed ETV
+582	862173 695 1156675 1322953 235 257 23 0.973 23.549369421716 224.9207874602 3257.8538314511
+581	862868 734 1156675 1322953 235 257 23 -4.4680681030059 2.5325868613319 20.078082255712 121.68805637689
+579	863602 767 1150319 1322953 234 257 24 1.5076189856045 34.774722481169 469.78119436691 11464.52799671
+576	864369 786 1143962 1322953 233 257 25 530.1 999.88119436691 17777.558054337 13260665.39167
+575	865155 550 1143962 1322953 233 257 25 520.2 520.2 13005 6765201
+vector 650 highwayNetwork.node[129].veinsmobility acceleration ETV
+vector 651 highwayNetwork.node[129].veinsmobility co2emission ETV
+vector 652 highwayNetwork.node[130].veinsmobility speed ETV
+466	865898 2107 849097 1330879 187 258 72 0.973 34.284971105754 747.27226351089 12936.492549696
+465	868005 2225 849097 1330879 187 258 72 -4.5 2.5810899279779 38.094170904102 471.20577111725
+462	870230 2307 842765 1330879 186 258 73 2.3095308323624 40.403701736464 1477.1362087632 37762.57343802
+458	872537 2080 836074 1330879 185 258 74 30.1 1014.8762087632 34995.414333567 20607549.388614
+457	874617 1886 836074 1330879 185 258 74 523.4 1020.2 59051.423951834 50834885.292077
+vector 653 highwayNetwork.node[131].veinsmobility posx ETV
+vector 654 highwayNetwork.node[131].veinsmobility posy ETV
+vector 655 highwayNetwork.node[130].veinsmobility acceleration ETV
+vector 656 highwayNetwork.node[130].veinsmobility co2emission ETV
+526	876754 1446 1020906 1338392 212 259 48 -1.0111665305278 23.404297445539 397.45642748115 5238.4681715419
+525	878200 1534 1020906 1338392 212 259 48 -4.5 2.5888574362732 28.373923381905 219.62367334731
+522	879734 1565 1015654 1338392 211 259 49 1.3236146904062 34.112006003538 979.68997755369 23970.184852395
+518	881299 1389 1010058 1338392 210 259 50 530.1 1023.4 43562.921281343 39756404.203309
+517	882688 1339 1010058 1338392 210 259 50 35.150022446307 523.4 21580.919574594 10337485.878524
+vector 657 highwayNetwork.node[132].veinsmobility posx ETV
+vector 658 highwayNetwork.node[132].veinsmobility posy ETV
+vector 659 highwayNetwork.node[131].veinsmobility speed ETV
+474	884205 2069 870014 1345898 190 260 71 0.973 28.235723078367 764.803872509 13385.788027802
+473	886274 2206 870014 1345898 190 260 71 -4.5 2.5694476807024 39.690198039401 461.99347605805
+472	888480 2279 862920 1345898 189 260 72 2.4471111744642 42.137309213865 1472.4756028471 38404.227341523
+468	890759 2049 855818 1345898 188 260 73 30.1 1005.0556028471 34485.660659096 20119194.709633
+467	892808 1876 855818 1345898 188 260 73 523.4 1023.4 57806.171861727 49478270.516321
+vector 660 highwayNetwork.node[131].veinsmobility acceleration ETV
+vector 661 highwayNetwork.node[131].veinsmobility co2emission ETV
+vector 662 highwayNetwork.node[132].veinsmobility speed ETV
+vector 663 highwayNetwork.node[132].veinsmobility acceleration ETV
+vector 664 highwayNetwork.node[132].veinsmobility co2emission ETV
+404	895010 2793 721678 1360536 166 262 97 0.973 25.961381562266 876.81106216549 13059.214185409
+403	897803 3004 721678 1360536 166 262 97 -4.5 2.5970475207316 31.408584989868 601.80005750923
+402	900807 3082 714604 1360536 165 262 98 1.3514909988036 35.492917843512 1982.441776593 49222.885704593
+401	903889 2672 707117 1360536 164 262 99 30.1 1023.4 60900.013897276 47222159.99947
+400	906561 2623 707117 1360536 164 262 99 29.91822340703 1023.4 67534.398728273 54141040.903199
+vector 665 highwayNetwork.node[133].veinsmobility posx ETV
+vector 666 highwayNetwork.node[133].veinsmobility posy ETV
+vector 667 highwayNetwork.node[133].veinsmobility speed ETV
+vector 668 highwayNetwork.node[133].veinsmobility acceleration ETV
+vector 669 highwayNetwork.node[133].veinsmobility co2emission ETV
+541	909495 1423 1058685 1381858 219 265 47 0.84476022559806 24.14599270712 422.88410643803 6017.6642476393
+540	910918 1498 1058685 1381858 219 265 47 -4.5 2.5685933529399 30.632521224004 227.18044701547
+539	912416 1527 1053083 1381858 218 265 48 1.6766440037638 34.237250070251 977.35275518332 24517.652716076
+534	913943 1365 1047484 1381858 217 265 49 530.1 1023.4 42421.822701414 38513601.930818
+533	915308 1292 1047484 1381858 217 265 49 37.487244816683 523.4 21352.723837358 10267990.171974
+vector 670 highwayNetwork.node[134].veinsmobility posx ETV
+vector 671 highwayNetwork.node[134].veinsmobility posy ETV
+612	916718 683 1224395 1388970 244 266 23 0.973 23.503754339644 224.5016816483 3311.0132650927
+611	917401 728 1224395 1388970 244 266 23 -4.5 2.5851429223781 14.43545440112 151.62497320519
+609	918129 766 1216052 1388970 243 266 24 2.4431164680282 34.557949358275 480.91652371452 11670.464128253
+606	918895 785 1207707 1388970 242 266 25 530.1 1011.0165237145 18240.245320934 13983906.312903
+605	919680 550 1207707 1388970 242 266 25 520.2 520.2 13005 6765201
+vector 672 highwayNetwork.node[134].veinsmobility speed ETV
+vector 673 highwayNetwork.node[135].veinsmobility posx ETV
+vector 674 highwayNetwork.node[135].veinsmobility posy ETV
+vector 675 highwayNetwork.node[134].veinsmobility acceleration ETV
+vector 676 highwayNetwork.node[134].veinsmobility co2emission ETV
+544	920541 1423 1064295 1402803 220 268 49 0.973 26.897473554806 435.9142221461 6153.164392863
+543	921964 1507 1064295 1402803 220 268 49 -4.5 2.5805905637564 14.396027207376 319.15600576582
+542	923471 1598 1058685 1402803 219 268 50 1.7400250753155 34.995463603032 984.51958033338 23703.665058725
+538	925069 1390 1053083 1402803 218 268 51 30.1 523.4 18994.1185082 8894479.5165057
+537	926459 1386 1053083 1402803 218 268 51 530.32041966662 1023.4 46941.990682975 44464464.644378
+vector 677 highwayNetwork.node[135].veinsmobility speed ETV
+vector 678 highwayNetwork.node[135].veinsmobility acceleration ETV
+vector 679 highwayNetwork.node[135].veinsmobility co2emission ETV
+422	928038 2863 758453 1416595 172 270 99 0.973 26.223844744967 849.11070456855 11809.735368072
+421	930901 3108 758453 1416595 172 270 99 -4.5 2.5946380711859 27.452447979083 595.42203680068
+419	934009 3150 752503 1416595 171 270 100 1.506013907725 35.817863748472 1978.2652232009 47810.631066336
+416	937159 2736 746548 1416595 170 270 101 30.1 1023.4 62493.975176368 48572930.814635
+415	939895 2697 746548 1416595 170 270 101 34.094776799145 1023.4 68550.541231702 54908505.241842
+vector 680 highwayNetwork.node[136].veinsmobility posx ETV
+vector 681 highwayNetwork.node[136].veinsmobility posy ETV
+vector 682 highwayNetwork.node[137].veinsmobility posx ETV
+vector 683 highwayNetwork.node[137].veinsmobility posy ETV
+vector 684 highwayNetwork.node[136].veinsmobility speed ETV
+vector 685 highwayNetwork.node[137].veinsmobility speed ETV
+vector 686 highwayNetwork.node[136].veinsmobility acceleration ETV
+vector 687 highwayNetwork.node[136].veinsmobility co2emission ETV
+vector 688 highwayNetwork.node[137].veinsmobility acceleration ETV
+vector 689 highwayNetwork.node[137].veinsmobility co2emission ETV
+vector 690 highwayNetwork.node[138].veinsmobility posx ETV
+vector 691 highwayNetwork.node[138].veinsmobility posy ETV
+446	943332 2746 810754 1451682 181 275 95 0.2086539919682 29.068748751827 896.83187820065 14083.527091755
+445	946078 2979 810754 1451682 181 275 95 -4.5 2.5887429524679 32.696200803566 606.96902166835
+442	949057 3032 804775 1451682 180 275 96 1.4259997437475 35.619969368982 1985.5491169838 50149.504802984
+441	952089 2624 798806 1451682 179 275 97 30.1 1023.4 58887.678652994 45196452.533457
+440	954713 2596 798806 1451682 179 275 97 26.810883016224 1020.2 66586.102001019 53629515.916388
+556	957309 1501 1094855 1451682 225 275 51 0.973 22.170632183417 362.24068623895 4389.9919500819
+555	958810 1658 1094855 1451682 225 275 51 -4.48663558152 2.5895956542343 21.218402815264 235.92304634917
+554	960468 1660 1088158 1451682 224 275 52 1.909700911114 34.378450948212 966.31017971583 21672.469593307
+549	962128 1455 1081825 1451682 223 275 53 530.1 1020.2 46652.62076636 42864103.799399
+548	963583 1423 1081825 1451682 223 275 53 43.36982028417 520.2 22434.297154902 10639680.592178
+vector 692 highwayNetwork.node[138].veinsmobility speed ETV
+vector 693 highwayNetwork.node[138].veinsmobility acceleration ETV
+vector 694 highwayNetwork.node[138].veinsmobility co2emission ETV
+566	965199 1478 1114679 1465873 228 277 50 0.973 24.180578327627 388.38591335339 4938.8540834436
+565	966677 1623 1114679 1465873 228 277 50 -4.0935444072742 2.5977124502184 25.740439440351 224.83525251103
+564	968300 1628 1107937 1465873 227 277 51 2.0487820545677 34.174507709756 957.43934464581 22316.262521664
+559	969928 1444 1101203 1465873 226 277 52 530.1 1020.2 45442.841495919 41507022.815148
+558	971372 1381 1101203 1465873 226 277 52 52.240655354191 520.2 22657.086785194 10857238.593453
+vector 695 highwayNetwork.node[139].veinsmobility posx ETV
+vector 696 highwayNetwork.node[139].veinsmobility posy ETV
+vector 697 highwayNetwork.node[139].veinsmobility speed ETV
+vector 698 highwayNetwork.node[139].veinsmobility acceleration ETV
+vector 699 highwayNetwork.node[139].veinsmobility co2emission ETV
+vector 700 highwayNetwork.node[140].veinsmobility posx ETV
+vector 701 highwayNetwork.node[140].veinsmobility posy ETV
+vector 702 highwayNetwork.node[140].veinsmobility speed ETV
+vector 703 highwayNetwork.node[140].veinsmobility acceleration ETV
+vector 704 highwayNetwork.node[140].veinsmobility co2emission ETV
+vector 705 highwayNetwork.node[141].veinsmobility posx ETV
+vector 706 highwayNetwork.node[141].veinsmobility posy ETV
+592	973493 1426 1177248 1514054 238 284 47 -0.40366236179004 25.540382830985 453.21320857722 6420.9719014419
+591	974919 1500 1177248 1514054 238 284 47 -4.5 2.3930914554279 33.281861624752 235.29650638269
+589	976419 1535 1170138 1514054 237 284 48 1.5627552251797 35.859948418477 977.26053503066 24783.330620853
+586	977954 1359 1163018 1514054 236 284 49 530.1 1020.2 42268.577250805 38237096.927103
+585	979313 1296 1163018 1514054 236 284 49 32.41946496934 520.2 21333.613188696 10229657.314449
+661	980609 702 1353420 1514054 261 284 24 0.973 26.62133852358 224.21010482306 3364.7877928212
+660	981311 749 1353420 1514054 261 284 24 -4.5 2.5042562474497 15.588433476064 147.60270145718
+659	982060 799 1345898 1514054 260 284 25 1.5499324048636 34.68685178251 480.32618092247 11391.450214979
+654	982859 819 1338392 1514054 259 284 26 530.1 1010.4261809225 18953.817314266 14530028.387379
+653	983678 572 1338392 1514054 259 284 26 520.2 520.2 13525.2 7035809.04
+vector 707 highwayNetwork.node[141].veinsmobility speed ETV
+vector 708 highwayNetwork.node[141].veinsmobility acceleration ETV
+vector 709 highwayNetwork.node[141].veinsmobility co2emission ETV
+vector 710 highwayNetwork.node[142].veinsmobility posx ETV
+vector 711 highwayNetwork.node[142].veinsmobility posy ETV
+vector 712 highwayNetwork.node[143].veinsmobility posx ETV
+vector 713 highwayNetwork.node[143].veinsmobility posy ETV
+vector 714 highwayNetwork.node[142].veinsmobility speed ETV
+vector 715 highwayNetwork.node[143].veinsmobility speed ETV
+vector 716 highwayNetwork.node[142].veinsmobility acceleration ETV
+vector 717 highwayNetwork.node[142].veinsmobility co2emission ETV
+vector 718 highwayNetwork.node[143].veinsmobility acceleration ETV
+vector 719 highwayNetwork.node[143].veinsmobility co2emission ETV
+604	985065 1484 1200190 1549939 241 289 49 0.03883055953391 20.933642086941 392.08537826716 5004.3779163972
+603	986549 1516 1200190 1549939 241 289 49 -4.5 2.5825038738316 26.38850289195 237.01653634563
+600	988065 1592 1192274 1549939 240 289 50 1.9549611008028 34.329050243419 971.82615658224 23189.741909311
+598	989657 1419 1184355 1549939 239 289 51 530.1 1023.4 44117.066317289 40045437.177759
+597	991076 1349 1184355 1549939 239 289 51 43.013843417765 523.4 22057.041017241 10572259.229176
+vector 720 highwayNetwork.node[144].veinsmobility posx ETV
+vector 721 highwayNetwork.node[144].veinsmobility posy ETV
+vector 722 highwayNetwork.node[144].veinsmobility speed ETV
+vector 723 highwayNetwork.node[144].veinsmobility acceleration ETV
+vector 724 highwayNetwork.node[144].veinsmobility co2emission ETV
+vector 725 highwayNetwork.node[145].veinsmobility posx ETV
+vector 726 highwayNetwork.node[145].veinsmobility posy ETV
+481	992854 2924 890558 1579894 193 293 101 -2.2277013159916 26.302417297598 851.05653928887 12639.677634208
+480	995778 3147 890558 1579894 193 293 101 -4.5 2.56389111483 27.627688826318 616.64262286477
+477	998925 3232 883836 1579894 192 293 102 1.6434666978195 36.116191239543 1956.598971716 47316.530859763
+476	1002157 2802 877111 1579894 191 293 103 30.1 1023.4 63912.11302216 49676939.362991
+475	1004959 2782 877111 1579894 191 293 103 50.601028283999 1020.2 70187.518601688 56094050.54571
+vector 727 highwayNetwork.node[145].veinsmobility speed ETV
+vector 728 highwayNetwork.node[145].veinsmobility acceleration ETV
+vector 729 highwayNetwork.node[145].veinsmobility co2emission ETV
+489	1007934 2913 912327 1595264 196 295 100 -2.2279693531324 28.363494940363 839.65981853774 12071.984373849
+488	1010847 3129 912327 1595264 196 295 100 -4.5 2.5826405534521 25.952416787093 616.49934803618
+487	1013976 3201 905198 1595264 195 295 101 2.4813469309127 35.234697366033 1975.1912223443 47473.203000038
+483	1017177 2773 897683 1595264 194 295 102 30.1 1020.2 63715.802755008 49499065.408733
+482	1019950 2747 897683 1595264 194 295 102 37.168777655748 1023.4 68682.269939384 54605030.694811
+vector 730 highwayNetwork.node[146].veinsmobility posx ETV
+vector 731 highwayNetwork.node[146].veinsmobility posy ETV
+619	1022815 1443 1247747 1602749 247 296 50 0.973 28.551667292461 460.61485483383 7163.3599692424
+618	1024258 1588 1247747 1602749 247 296 50 -4.5 2.5754436641466 16.5597048073 353.862202227
+617	1025846 1629 1239827 1602749 246 296 51 1.8393816019016 35.809195717548 977.12588408797 23704.613726759
+616	1027475 1411 1231918 1602749 245 296 52 30.1 520.2 19552.569012329 9170187.5999538
+615	1028886 1420 1231918 1602749 245 296 52 532.55411591203 1020.2 48054.085679484 45608649.386738
+687	1030306 705 1437496 1602749 273 296 24 0.973 28.600918815075 221.916902433 3453.7982985945
+686	1031011 748 1437496 1602749 273 296 24 -4.5 2.5942700566957 13.633306577242 149.49910638303
+684	1031759 796 1430404 1602749 272 296 25 2.0575246850029 34.959613654483 482.47029377151 11523.170141624
+681	1032555 818 1423302 1602749 271 296 26 530.1 1012.5702937715 18906.614536868 14461487.465209
+680	1033373 572 1423302 1602749 271 296 26 520.2 520.2 13525.2 7035809.04
+vector 732 highwayNetwork.node[146].veinsmobility speed ETV
+631	1034005 1405 1278995 1610237 251 297 47 0.973 25.569236589826 414.10804028301 5530.9705100699
+630	1035410 1508 1278995 1610237 251 297 47 -4.5 2.5862065865425 28.891734101365 214.04671323692
+627	1036918 1534 1271470 1610237 250 297 48 2.2876904874807 34.565994266892 981.07633547329 24266.067405559
+623	1038452 1357 1263555 1610237 249 297 49 530.1 1023.4 42745.824091946 39033606.858874
+622	1039809 1305 1263555 1610237 249 297 49 33.763664526714 523.4 21130.930230605 10114780.788206
+vector 733 highwayNetwork.node[146].veinsmobility acceleration ETV
+vector 734 highwayNetwork.node[146].veinsmobility co2emission ETV
+vector 735 highwayNetwork.node[147].veinsmobility posx ETV
+vector 736 highwayNetwork.node[147].veinsmobility posy ETV
+502	1041365 2857 954691 1623246 202 299 98 -0.085135372609519 28.962271517726 834.7409604486 12407.408465812
+501	1044222 3098 954691 1623246 202 299 98 -4.5 2.5692181249848 26.931302847197 597.11104990769
+499	1047320 3141 947584 1623246 201 299 99 1.3911748370389 36.02321364316 1953.507578788 46837.073635652
+496	1050461 2721 940059 1623246 200 299 100 30.1 1023.4 61400.622535723 47366800.821757
+495	1053182 2691 940059 1623246 200 299 100 53.692421212015 1020.2 68671.259210194 55241008.292115
+561	1055873 2122 1101203 1623246 226 299 74 0.973 24.172403672876 662.61970773835 9899.4018747701
+560	1057995 2286 1101203 1623246 226 299 74 -4.5 2.589783199504 15.389218428069 497.91220693703
+557	1060281 2393 1094855 1623246 225 299 75 2.5693853801116 36.30472348163 1486.4540074563 36137.044230361
+553	1062674 2163 1088158 1623246 224 299 76 30.1 1013.8740074563 37487.721451727 23010336.26984
+552	1064837 1967 1088158 1623246 224 299 76 520.2 1023.4 59480.479051963 50486624.086434
+vector 737 highwayNetwork.node[147].veinsmobility speed ETV
+vector 738 highwayNetwork.node[147].veinsmobility acceleration ETV
+vector 739 highwayNetwork.node[147].veinsmobility co2emission ETV
+636	1066997 1424 1294020 1635886 253 301 49 0.973 23.367418447487 456.389644791 6912.8572766829
+635	1068421 1528 1294020 1635886 253 301 49 -4.5 2.5987938659498 14.256985974534 346.58835077056
+632	1069949 1596 1286510 1635886 252 301 50 1.7803084124345 36.050515954946 978.70185756054 23689.305496281
+629	1071545 1378 1278995 1635886 251 301 51 30.1 520.2 19102.298278569 8938102.3002461
+628	1072923 1386 1278995 1635886 251 301 51 530.97814243946 1020.2 46881.661666494 44331667.838665
+vector 740 highwayNetwork.node[148].veinsmobility posx ETV
+vector 741 highwayNetwork.node[148].veinsmobility posy ETV
+vector 742 highwayNetwork.node[149].veinsmobility posx ETV
+vector 743 highwayNetwork.node[149].veinsmobility posy ETV
+vector 744 highwayNetwork.node[148].veinsmobility speed ETV
+vector 745 highwayNetwork.node[149].veinsmobility speed ETV
+vector 746 highwayNetwork.node[148].veinsmobility acceleration ETV
+vector 747 highwayNetwork.node[148].veinsmobility co2emission ETV
+vector 748 highwayNetwork.node[149].veinsmobility acceleration ETV
+vector 749 highwayNetwork.node[149].veinsmobility co2emission ETV
+vector 750 highwayNetwork.node[150].veinsmobility posx ETV
+vector 751 highwayNetwork.node[150].veinsmobility posy ETV
+vector 752 highwayNetwork.node[151].veinsmobility posx ETV
+vector 753 highwayNetwork.node[151].veinsmobility posy ETV
+641	1075167 1520 1308279 1660731 255 305 51 0.973 24.430709640105 390.31427769139 4746.1006960655
+640	1076687 1637 1308279 1660731 255 305 51 -4.5 2.533649820555 25.727938535471 225.01041907872
+639	1078324 1658 1301148 1660731 254 305 52 1.9765866937349 33.55849128605 979.00657775408 22915.30670865
+634	1079982 1467 1294020 1660731 253 305 53 530.1 1020.2 46330.344112656 42355741.485795
+633	1081449 1412 1294020 1660731 253 305 53 30.673422245917 520.2 22738.428995055 10870875.232485
+vector 754 highwayNetwork.node[150].veinsmobility speed ETV
+vector 755 highwayNetwork.node[151].veinsmobility speed ETV
+651	1082981 1458 1330879 1667782 258 306 49 0.973 24.319236919555 405.26206741496 5411.4302861464
+650	1084439 1580 1330879 1667782 258 306 49 -4.5 2.5708344023209 26.178198461729 234.30211195988
+649	1086019 1588 1322953 1667782 257 306 50 1.547822468821 36.132845017081 979.38572302432 23388.518281027
+644	1087607 1410 1315416 1667782 256 306 51 530.1 1023.4 44570.093721327 40786616.583664
+643	1089017 1361 1315416 1667782 256 306 51 35.454276975681 523.4 21772.651800413 10390854.732138
+vector 756 highwayNetwork.node[150].veinsmobility acceleration ETV
+vector 757 highwayNetwork.node[150].veinsmobility co2emission ETV
+vector 758 highwayNetwork.node[151].veinsmobility acceleration ETV
+vector 759 highwayNetwork.node[151].veinsmobility co2emission ETV
+514	1090644 2907 997001 1674454 208 307 100 -1.0383594852635 28.512981047981 854.12190030217 12639.260220739
+513	1093551 3172 997001 1674454 208 307 100 -4.5 2.5897125128657 26.201185778685 616.35979866592
+512	1096723 3213 989885 1674454 207 307 101 2.4663052213145 35.730004926398 1951.1621618287 46961.071917124
+511	1099936 2798 982772 1674454 206 307 102 30.1 1023.4 63595.022103058 49567867.212148
+510	1102734 2755 982772 1674454 206 307 102 56.037838171272 1020.2 69697.849158142 55720627.980264
+vector 760 highwayNetwork.node[152].veinsmobility posx ETV
+vector 761 highwayNetwork.node[152].veinsmobility posy ETV
+vector 762 highwayNetwork.node[153].veinsmobility posx ETV
+vector 763 highwayNetwork.node[153].veinsmobility posy ETV
+vector 764 highwayNetwork.node[152].veinsmobility speed ETV
+vector 765 highwayNetwork.node[153].veinsmobility speed ETV
+vector 766 highwayNetwork.node[152].veinsmobility acceleration ETV
+vector 767 highwayNetwork.node[152].veinsmobility co2emission ETV
+vector 768 highwayNetwork.node[153].veinsmobility acceleration ETV
+vector 769 highwayNetwork.node[153].veinsmobility co2emission ETV
+vector 770 highwayNetwork.node[154].veinsmobility posx ETV
+vector 771 highwayNetwork.node[154].veinsmobility posy ETV
+vector 772 highwayNetwork.node[155].veinsmobility posx ETV
+vector 773 highwayNetwork.node[155].veinsmobility posy ETV
+521	1106347 2965 1015654 1700902 211 311 101 -0.13122584852509 26.212560826478 863.40802563415 12757.667366203
+520	1109312 3225 1015654 1700902 211 311 101 -4.5 2.5786935502663 28.117980041494 590.41897337348
+519	1112537 3253 1010058 1700902 210 311 102 1.8174019045196 35.957715860708 1980.388133978 48004.664148667
+516	1115790 2835 1003345 1700902 209 311 103 30.1 1023.4 64662.766706759 50728927.238118
+515	1118625 2796 1003345 1700902 209 311 103 37.131866021967 1023.4 69218.903544725 54739658.653124
+594	1121421 2136 1177248 1700902 238 311 74 0.973 25.339786379534 653.08627799802 9391.4884023142
+593	1123557 2340 1177248 1700902 238 311 74 -4.5 2.5946052615996 18.80467048045 471.00673337083
+590	1125897 2395 1170138 1700902 237 311 75 2.3012810561107 35.348663590812 1464.7935464837 35192.016682901
+588	1128292 2180 1163018 1700902 236 311 76 30.1 997.37354648371 36917.174336872 22152054.057511
+587	1130472 1958 1163018 1700902 236 311 76 523.4 1023.4 59788.685026924 50939724.618812
+vector 774 highwayNetwork.node[154].veinsmobility speed ETV
+vector 775 highwayNetwork.node[155].veinsmobility speed ETV
+717	1132550 707 1549939 1708400 289 312 24 0.973 22.353368917855 218.65219084747 2998.7491725148
+716	1133257 738 1549939 1708400 289 312 24 -4.5 2.4885021245573 10.370112156009 159.99527752767
+714	1133995 800 1542447 1708400 288 312 25 2.3057318226667 34.324907142588 487.1937525396 11744.283386414
+711	1134795 821 1534956 1708400 287 312 26 530.1 1017.2937525396 19228.077233649 14976626.673064
+710	1135616 572 1534956 1708400 287 312 26 520.2 520.2 13525.2 7035809.04
+vector 776 highwayNetwork.node[154].veinsmobility acceleration ETV
+vector 777 highwayNetwork.node[154].veinsmobility co2emission ETV
+vector 778 highwayNetwork.node[155].veinsmobility acceleration ETV
+vector 779 highwayNetwork.node[155].veinsmobility co2emission ETV
+529	1136454 2915 1031741 1715135 214 313 100 -1.1140136484663 25.053118454417 839.37547471151 12058.156647524
+528	1139369 3149 1031741 1715135 214 313 100 -4.5 2.5910232500406 29.250387921097 571.61432410932
+527	1142518 3223 1026486 1715135 213 313 101 1.4452646597521 35.179867250197 1960.0417441524 46955.095624959
+524	1145741 2810 1020906 1715135 212 313 102 30.1 1023.4 62634.796609505 48512625.886892
+523	1148551 2759 1020906 1715135 212 313 102 52.318255847617 1023.4 70255.215832117 56510657.624661
+vector 780 highwayNetwork.node[156].veinsmobility posx ETV
+vector 781 highwayNetwork.node[156].veinsmobility posy ETV
+602	1151428 2159 1200190 1721479 241 314 74 0.36095315537184 24.545358190613 706.5520272075 11185.669084812
+601	1153587 2350 1200190 1721479 241 314 74 -4.5 2.5968504622346 32.081175577972 467.78446618595
+599	1155937 2389 1192274 1721479 240 314 75 1.5331570595736 36.174881908767 1463.3045426467 36201.528428792
+596	1158326 2166 1184355 1721479 239 314 76 30.1 1001.0445426467 36272.471618093 21365803.848744
+595	1160492 1967 1184355 1721479 239 314 76 523.4 1020.2 60261.624703966 51626372.116901
+vector 782 highwayNetwork.node[156].veinsmobility speed ETV
+614	1162519 2117 1224395 1727830 244 315 72 -1.0314677003611 25.75744352734 688.41633740622 10755.265711823
+613	1164636 2293 1224395 1727830 244 315 72 -4.5 2.5851509200875 33.451180559687 435.73784828043
+610	1166929 2327 1216052 1727830 243 315 73 1.3311779724434 35.288937990324 1471.7283836138 36605.322915549
+608	1169256 2110 1207707 1727830 242 315 74 30.1 999.14838361378 35132.483760831 20714461.825166
+607	1171366 1911 1207707 1727830 242 315 74 520.2 1023.4 58859.926418044 50619401.763358
+vector 783 highwayNetwork.node[156].veinsmobility acceleration ETV
+vector 784 highwayNetwork.node[156].veinsmobility co2emission ETV
+vector 785 highwayNetwork.node[157].veinsmobility posx ETV
+vector 786 highwayNetwork.node[157].veinsmobility posy ETV
+vector 787 highwayNetwork.node[158].veinsmobility posx ETV
+vector 788 highwayNetwork.node[158].veinsmobility posy ETV
+536	1173646 2953 1047484 1739447 217 317 101 -0.76181752946654 25.826898313621 813.12622861635 11435.512081915
+535	1176599 3195 1047484 1739447 217 317 101 -4.5 2.5269608237781 25.318285012987 590.43348285709
+532	1179794 3252 1042234 1739447 216 317 102 2.055289207655 35.626941668941 1967.8187172987 46514.474109081
+531	1183046 2814 1036982 1739447 215 317 103 30.1 1020.2 64092.288653 49861595.459292
+530	1185860 2797 1036982 1739447 215 317 103 39.381282701283 1020.2 69673.70225787 55683460.964255
+vector 789 highwayNetwork.node[157].veinsmobility speed ETV
+vector 790 highwayNetwork.node[158].veinsmobility speed ETV
+626	1188777 2028 1271470 1745794 250 318 69 0.973 32.645943771616 769.60428381603 14102.282654259
+625	1190805 2198 1271470 1745794 250 318 69 -4.5 2.5957563863136 40.870051704277 464.05141652062
+624	1193003 2235 1263555 1745794 249 318 70 1.5600953104906 42.430147014767 1446.8524231766 37536.560919272
+621	1195238 2019 1255666 1745794 248 318 71 30.1 979.43242317656 33071.58751347 19051324.032344
+620	1197257 1837 1255666 1745794 248 318 71 523.4 1023.4 56804.332068917 49005760.245158
+vector 791 highwayNetwork.node[157].veinsmobility acceleration ETV
+vector 792 highwayNetwork.node[157].veinsmobility co2emission ETV
+vector 793 highwayNetwork.node[158].veinsmobility acceleration ETV
+vector 794 highwayNetwork.node[158].veinsmobility co2emission ETV
+551	1199360 2848 1081825 1751807 223 319 97 -1.8247313879461 25.039809103683 879.98949356295 12962.919191887
+550	1202208 3049 1081825 1751807 223 319 97 -4.5 2.5871219542343 32.042959813537 582.91866194765
+547	1205257 3128 1075867 1751807 222 319 98 2.54045786676 35.265794404621 1981.5969707849 49165.988693622
+546	1208385 2714 1069909 1751807 221 319 99 30.1 1023.4 60098.068098192 46114574.314283
+545	1211099 2670 1069909 1751807 221 319 99 25.603029215142 1020.2 68138.426165191 55031545.516346
+vector 795 highwayNetwork.node[159].veinsmobility posx ETV
+vector 796 highwayNetwork.node[159].veinsmobility posy ETV
+vector 797 highwayNetwork.node[160].veinsmobility posx ETV
+vector 798 highwayNetwork.node[160].veinsmobility posy ETV
+vector 799 highwayNetwork.node[159].veinsmobility speed ETV
+vector 800 highwayNetwork.node[160].veinsmobility speed ETV
+vector 801 highwayNetwork.node[159].veinsmobility acceleration ETV
+vector 802 highwayNetwork.node[159].veinsmobility co2emission ETV
+vector 803 highwayNetwork.node[160].veinsmobility acceleration ETV
+vector 804 highwayNetwork.node[160].veinsmobility co2emission ETV
+689	1214391 1446 1437496 1769510 273 322 50 0.973 28.71228552982 445.5215128295 6786.5348703957
+688	1215837 1586 1437496 1769510 273 322 50 -4.5 2.5856465283548 13.730810518724 346.87476646187
+685	1217423 1625 1430404 1769510 272 322 51 0.13460293274718 35.467265798899 977.10315678674 23320.835773335
+683	1219048 1412 1423302 1769510 271 322 52 30.1 520.2 18930.360419336 8821884.3347134
+682	1220460 1409 1423302 1769510 271 322 52 532.57684321326 1020.2 47774.66284741 45162566.325714
+vector 805 highwayNetwork.node[161].veinsmobility posx ETV
+vector 806 highwayNetwork.node[161].veinsmobility posy ETV
+vector 807 highwayNetwork.node[162].veinsmobility posx ETV
+vector 808 highwayNetwork.node[162].veinsmobility posy ETV
+vector 809 highwayNetwork.node[161].veinsmobility speed ETV
+vector 810 highwayNetwork.node[162].veinsmobility speed ETV
+vector 811 highwayNetwork.node[161].veinsmobility acceleration ETV
+vector 812 highwayNetwork.node[161].veinsmobility co2emission ETV
+vector 813 highwayNetwork.node[162].veinsmobility acceleration ETV
+vector 814 highwayNetwork.node[162].veinsmobility co2emission ETV
+694	1222491 1440 1465873 1788289 277 325 49 0.973 24.954709912141 443.12855425099 6618.281460669
+693	1223931 1542 1465873 1788289 277 325 49 -4.5 2.4344321409939 14.955137009883 327.56918371324
+692	1225473 1596 1459157 1788289 276 325 50 1.3415294736391 35.535443382819 979.21555978817 23621.02369455
+691	1227069 1390 1451682 1788289 275 325 51 30.1 523.4 18608.47361047 8683945.9487224
+690	1228459 1385 1451682 1788289 275 325 51 535.62444021183 1023.4 47030.755646706 44593158.01946
+vector 815 highwayNetwork.node[163].veinsmobility posx ETV
+vector 816 highwayNetwork.node[163].veinsmobility posy ETV
+646	1229962 2108 1315416 1794672 256 326 71 -2.8351635135916 29.985344404627 748.87891708378 13115.798750511
+645	1232070 2201 1315416 1794672 256 326 71 -4.5 2.5892348277848 39.815090216198 462.26789296824
+642	1234271 2298 1308279 1794672 255 326 72 1.3965299661504 41.636792259561 1484.184063398 38992.366530453
+638	1236569 2067 1301148 1794672 254 326 73 30.1 1016.764063398 34410.239998158 20233153.421066
+637	1238636 1891 1301148 1794672 254 326 73 523.4 1023.4 58254.762706645 50165869.11201
+vector 817 highwayNetwork.node[163].veinsmobility speed ETV
+vector 818 highwayNetwork.node[163].veinsmobility acceleration ETV
+vector 819 highwayNetwork.node[163].veinsmobility co2emission ETV
+704	1240720 1345 1506958 1807009 283 328 46 0.973 24.803782835623 479.34477079761 7783.9948383793
+703	1242065 1457 1506958 1807009 283 328 46 -4.5 2.5365764082875 29.979402805548 284.9608992877
+702	1243522 1498 1499857 1807009 282 328 47 0.7063926539364 36.207618181662 980.05795584322 25072.073282497
+701	1245020 1312 1492761 1807009 281 328 48 30.1 523.4 17477.856668327 8146462.0703077
+700	1246332 1299 1492761 1807009 281 328 48 534.78204415678 1023.4 44702.347067101 42636380.338346
+vector 820 highwayNetwork.node[164].veinsmobility posx ETV
+vector 821 highwayNetwork.node[164].veinsmobility posy ETV
+vector 822 highwayNetwork.node[164].veinsmobility speed ETV
+757	1247809 718 1674454 1818937 307 330 24 0.973 24.776852050686 223.18524097487 3182.9198310604
+756	1248527 757 1674454 1818937 307 330 24 -4.5 2.4551342777209 13.186530534411 153.80827389223
+754	1249284 796 1667782 1818937 306 330 25 2.1706056552939 34.514916364355 481.85388195871 11475.304068229
+751	1250080 817 1660731 1818937 305 330 26 530.1 1011.9538819587 18931.436414036 14495080.01981
+750	1250897 572 1660731 1818937 305 330 26 520.2 520.2 13525.2 7035809.04
+vector 823 highwayNetwork.node[164].veinsmobility acceleration ETV
+vector 824 highwayNetwork.node[164].veinsmobility co2emission ETV
+569	1251602 3033 1121039 1824885 229 331 103 0.26687252533849 28.432529090216 822.09839777028 11504.200596322
+568	1254635 3230 1121039 1824885 229 331 103 -4.5 2.5811049200129 23.715036399962 608.94616190137
+567	1257865 3322 1114679 1824885 228 331 104 1.550015126355 35.869916207334 1985.2742461772 46962.780871702
+563	1261187 2866 1107937 1824885 227 331 105 30.1 1023.4 65426.773263228 51178841.814598
+562	1264053 2873 1107937 1824885 227 331 105 27.085753822823 1023.4 70582.071833964 56534368.38883
+vector 825 highwayNetwork.node[165].veinsmobility posx ETV
+vector 826 highwayNetwork.node[165].veinsmobility posy ETV
+584	1267044 2824 1156675 1830468 235 332 98 0.039597460080739 30.915195914308 863.82822727126 13676.858925471
+583	1269868 3072 1156675 1830468 235 332 98 -4.5 2.5999200238148 23.953471981779 623.60894347698
+580	1272940 3161 1150319 1830468 234 332 99 2.5999553541187 37.215741807559 1969.4427195271 48064.367116495
+578	1276101 2738 1143962 1830468 233 332 100 30.1 1023.4 62291.435237744 48405099.919197
+577	1278839 2711 1143962 1830468 233 332 100 42.917280472945 1023.4 67295.263171777 53549466.693578
+vector 827 highwayNetwork.node[165].veinsmobility speed ETV
+vector 828 highwayNetwork.node[165].veinsmobility acceleration ETV
+vector 829 highwayNetwork.node[165].veinsmobility co2emission ETV
+574	1281743 3012 1138330 1841341 232 334 103 0.49306240596469 27.03398147939 809.66803091621 11029.080392864
+573	1284755 3247 1138330 1841341 232 334 103 -4.5 2.5658268728526 22.5642715713 602.53211879366
+572	1288002 3318 1132700 1841341 231 334 104 2.2299384188643 35.34376572927 1966.107680838 46097.733251252
+571	1291320 2857 1126692 1841341 230 334 105 30.1 1020.2 65631.013146167 50998223.700034
+570	1294177 2860 1126692 1841341 230 334 105 41.092319162034 1020.2 70818.886139238 56578707.273949
+vector 830 highwayNetwork.node[166].veinsmobility posx ETV
+vector 831 highwayNetwork.node[166].veinsmobility posy ETV
+vector 832 highwayNetwork.node[167].veinsmobility posx ETV
+vector 833 highwayNetwork.node[167].veinsmobility posy ETV
+vector 834 highwayNetwork.node[166].veinsmobility speed ETV
+vector 835 highwayNetwork.node[168].veinsmobility posx ETV
+vector 836 highwayNetwork.node[168].veinsmobility posy ETV
+vector 837 highwayNetwork.node[166].veinsmobility acceleration ETV
+vector 838 highwayNetwork.node[166].veinsmobility co2emission ETV
+vector 839 highwayNetwork.node[167].veinsmobility speed ETV
+vector 840 highwayNetwork.node[169].veinsmobility posx ETV
+vector 841 highwayNetwork.node[169].veinsmobility posy ETV
+vector 842 highwayNetwork.node[167].veinsmobility acceleration ETV
+vector 843 highwayNetwork.node[167].veinsmobility co2emission ETV
+vector 844 highwayNetwork.node[168].veinsmobility speed ETV
+vector 845 highwayNetwork.node[168].veinsmobility acceleration ETV
+vector 846 highwayNetwork.node[168].veinsmobility co2emission ETV
+vector 847 highwayNetwork.node[169].veinsmobility speed ETV
+664	1298148 2241 1360536 1869946 262 339 78 0.973 25.695834953957 679.81022481933 10357.727996968
+663	1300389 2451 1360536 1869946 262 339 78 -4.5 2.5843961095205 10.877004151259 542.12771856802
+662	1302840 2524 1353420 1869946 261 339 79 1.6506191830849 36.185371756861 1491.0786633408 35543.790720704
+658	1305364 2297 1345898 1869946 260 339 80 30.1 1018.4986633408 39839.27219342 24932096.841291
+657	1307661 2065 1345898 1869946 260 339 80 520.2 1023.4 62341.882078651 52775853.445109
+vector 848 highwayNetwork.node[169].veinsmobility acceleration ETV
+vector 849 highwayNetwork.node[169].veinsmobility co2emission ETV
+vector 850 highwayNetwork.node[170].veinsmobility posx ETV
+vector 851 highwayNetwork.node[170].veinsmobility posy ETV
+vector 852 highwayNetwork.node[170].veinsmobility speed ETV
+vector 853 highwayNetwork.node[170].veinsmobility acceleration ETV
+vector 854 highwayNetwork.node[170].veinsmobility co2emission ETV
+729	1310170 1414 1595264 1895107 295 343 49 0.973 25.711819438225 444.12501671063 6566.3565211227
+728	1311584 1544 1595264 1895107 295 343 49 -4.5 2.5971711366903 13.477959220936 341.51769756428
+727	1313128 1594 1587786 1895107 294 343 50 1.4697164732963 35.627149060527 973.14119196454 23338.477732901
+726	1314722 1380 1579894 1895107 293 343 51 30.1 520.2 19053.61797454 8904715.3226795
+725	1316102 1384 1579894 1895107 293 343 51 536.53880803546 1020.2 46821.62400944 44238520.962158
+792	1317486 740 1751807 1895107 319 343 25 0.973 26.549369241334 217.86343960194 3158.329868073
+791	1318226 805 1751807 1895107 319 343 25 -4.0867249622355 2.5383249282604 12.001101782423 142.56722291346
+789	1319031 830 1745794 1895107 318 343 26 2.1081011999398 34.417670181657 484.84658291267 11164.650155705
+786	1319861 853 1739447 1895107 317 343 27 530.1 1014.9465829127 19748.904909306 15196416.907488
+785	1320714 594 1739447 1895107 317 343 27 520.2 520.2 14045.4 7306417.08
+vector 855 highwayNetwork.node[171].veinsmobility posx ETV
+vector 856 highwayNetwork.node[171].veinsmobility posy ETV
+vector 857 highwayNetwork.node[171].veinsmobility speed ETV
+734	1321486 1405 1616925 1907516 298 345 48 0.973 29.034724921733 463.47401755523 7638.6685269218
+733	1322891 1524 1616925 1907516 298 345 48 -4.5 2.5972709450638 16.926896618909 337.01814740109
+732	1324415 1563 1610237 1907516 297 345 49 1.6335158590693 36.841385499504 972.98259410766 23653.323854763
+731	1325978 1357 1602749 1907516 296 345 50 30.1 523.4 18713.09505217 8781574.0883013
+730	1327335 1363 1602749 1907516 296 345 50 541.85740589234 1023.4 46235.732082723 43887332.375156
+vector 858 highwayNetwork.node[171].veinsmobility acceleration ETV
+vector 859 highwayNetwork.node[171].veinsmobility co2emission ETV
+679	1328831 2263 1416595 1919189 270 347 78 0.973 26.86120721887 667.1505617396 10081.983976465
+678	1331094 2506 1416595 1919189 270 347 78 -4.5 2.5362247161102 19.958738770464 482.6443068171
+677	1333600 2519 1409901 1919189 269 347 79 0.50183224514787 35.600240444408 1464.0011458312 34411.01713613
+674	1336119 2285 1402803 1919189 268 347 80 30.1 996.58114583116 38358.14106156 22943965.437248
+673	1338404 2066 1402803 1919189 268 347 80 523.4 1023.4 62752.940740067 53354329.05294
+747	1340470 1391 1654439 1930147 304 349 46 0.073008187057684 26.833455590959 420.42793594638 6097.7889192213
+746	1341861 1446 1654439 1930147 304 349 46 -4.5 2.5678955412237 27.957250793095 257.56109196227
+744	1343307 1503 1648140 1930147 303 349 47 2.5613821226638 36.175588151207 967.65918785444 24296.985238054
+741	1344810 1326 1641833 1930147 302 349 48 530.1 1020.2 41774.028690176 38051676.474864
+740	1346136 1270 1641833 1930147 302 349 48 42.02081214556 520.2 20648.804553539 9849304.925845
+812	1347406 745 1788289 1930147 325 349 25 0.973 21.58915315152 212.7247416393 2782.9304312408
+811	1348151 804 1788289 1930147 325 349 25 -4.3577845534714 2.3963220184669 15.213157760919 130.84123031117
+809	1348955 828 1781912 1930147 324 349 26 1.552567418688 33.422886150851 481.56052590273 11013.136086977
+806	1349783 850 1775530 1930147 323 349 27 530.1 1011.6605259027 19518.213640455 14826617.470423
+805	1350633 594 1775530 1930147 323 349 27 520.2 520.2 14045.4 7306417.08
+vector 860 highwayNetwork.node[172].veinsmobility posx ETV
+vector 861 highwayNetwork.node[172].veinsmobility posy ETV
+vector 862 highwayNetwork.node[172].veinsmobility speed ETV
+vector 863 highwayNetwork.node[172].veinsmobility acceleration ETV
+vector 864 highwayNetwork.node[172].veinsmobility co2emission ETV
+749	1351538 1448 1654439 1955087 304 354 51 0.973 26.422517723322 430.37236673763 6439.1152783991
+748	1352986 1595 1654439 1955087 304 354 51 -4.5 2.5760986009613 1.8840400900255 356.96547936452
+745	1354581 1659 1648140 1955087 303 354 52 1.9358179320116 35.044730299614 983.89608907782 23460.126246685
+743	1356240 1434 1641833 1955087 302 354 53 30.1 523.4 19928.124867193 9384004.8586848
+742	1357674 1452 1641833 1955087 302 354 53 530.94391092218 1023.4 48059.335254681 45096152.432833
+767	1359126 1444 1694191 1969361 310 357 48 0.97024481100569 27.860337343164 402.50017902383 5423.1430393112
+766	1360570 1511 1694191 1969361 310 357 48 -4.5 2.5969612799818 27.101386454112 242.66489562911
+764	1362081 1565 1687481 1969361 309 357 49 1.6381332980935 35.423657767777 966.04220782317 23423.711869016
+761	1363646 1387 1680768 1969361 308 357 50 530.1 1023.4 43389.743623279 39472870.469923
+760	1365033 1324 1680768 1969361 308 357 50 48.79779217683 523.4 21730.031770098 10424523.084693
+777	1366357 1412 1715135 1978346 313 359 47 0.45822642347024 29.431729461262 423.28063660411 6130.5700280558
+776	1367769 1476 1715135 1978346 313 359 47 -4.5 2.5757232113741 27.954134334015 254.58591027346
+774	1369245 1530 1708400 1978346 312 359 48 2.58650594356 35.930007874688 982.28570115345 24244.445367874
+771	1370775 1347 1700902 1978346 311 359 49 530.1 1020.2 42949.406839845 39322197.899904
+770	1372122 1304 1700902 1978346 311 359 49 27.394298846553 520.2 20845.878043618 9933784.1307338
+vector 865 highwayNetwork.node[173].veinsmobility posx ETV
+vector 866 highwayNetwork.node[173].veinsmobility posy ETV
+656	1373544 3066 1338392 1990791 259 362 104 -0.35039048311413 27.222685004816 830.9415573821 11170.441488748
+655	1376610 3285 1338392 1990791 259 362 104 -4.5 2.5661535766907 25.088334423411 623.2533002705
+652	1379895 3351 1330879 1990791 258 362 105 0.95990153648382 35.648058476594 1972.2200690686 46706.748901301
+648	1383246 2903 1322953 1990791 257 362 106 30.1 1023.4 66486.967902191 52034388.359664
+647	1386149 2884 1322953 1990791 257 362 106 34.979930931427 1020.2 71207.725609482 56632305.610902
+vector 867 highwayNetwork.node[173].veinsmobility speed ETV
+709	1389093 2261 1528250 1995141 286 363 78 0.973 27.339484507052 664.29409733169 9896.0660637192
+708	1391354 2403 1528250 1995141 286 363 78 -4.5 2.5981973560294 5.5136732021483 563.50221037422
+707	1393757 2521 1521537 1995141 285 363 79 1.0070306903211 37.094713659324 1483.6855439319 35449.906902838
+706	1396278 2305 1514054 1995141 284 363 80 30.1 1016.2655439319 40454.868948803 25826178.419016
+705	1398583 2045 1514054 1995141 284 363 80 523.4 1023.4 62115.855566775 52404281.95605
+779	1400628 1487 1715135 1995141 313 363 51 0.973 27.215216710916 454.39646897432 6828.5453951933
+778	1402115 1619 1715135 1995141 313 363 51 -4.5 2.5942661972251 13.527782439503 352.46376909799
+775	1403734 1654 1708400 1995141 312 363 52 2.1370271230116 35.28931432103 979.20301709267 23352.716847142
+773	1405388 1428 1700902 1995141 311 363 53 30.1 520.2 19927.357868359 9345564.6589326
+772	1406816 1452 1700902 1995141 311 363 53 530.47698290733 1020.2 48831.400113422 46256254.063594
+vector 868 highwayNetwork.node[173].veinsmobility acceleration ETV
+vector 869 highwayNetwork.node[173].veinsmobility co2emission ETV
+vector 870 highwayNetwork.node[174].veinsmobility posx ETV
+vector 871 highwayNetwork.node[174].veinsmobility posy ETV
+669	1408519 2936 1381858 2002662 265 365 101 0.973 27.364755636363 839.40365609155 11737.151388462
+668	1411455 3223 1381858 2002662 265 365 101 -4.5 2.5811634428566 26.689369931647 593.89157205165
+667	1414678 3255 1374745 2002662 264 365 102 1.9035965731367 36.108726035032 1975.3220361871 47338.505758104
+666	1417933 2818 1367648 2002662 263 365 103 30.1 1023.4 64000.319034025 49655781.562151
+665	1420751 2791 1367648 2002662 263 365 103 31.877963812911 1020.2 69600.728211924 55431111.252066
+719	1423542 2240 1549939 2002662 289 365 77 -1.6720627875162 26.07310479483 661.53256597743 10136.562046894
+718	1425782 2439 1549939 2002662 289 365 77 -4.5 2.5949147774605 17.410435247753 517.46377685469
+715	1428221 2490 1542447 2002662 288 365 78 0.46421769801528 35.911758665207 1469.3725385002 34944.899805269
+713	1430711 2260 1534956 2002662 287 365 79 30.1 1007.1125385002 38351.833779359 23326061.673619
+712	1432971 2034 1534956 2002662 287 365 79 523.4 1020.2 62653.008382966 53712029.713365
+vector 872 highwayNetwork.node[174].veinsmobility speed ETV
+854	1435065 709 1895107 2006402 343 366 24 -0.82866383701492 24.551249270086 198.92948166383 2856.3890427662
+853	1435774 765 1895107 2006402 343 366 24 -4.5 2.5864158875309 11.939970575475 133.64442774017
+852	1436539 799 1888714 2006402 342 366 25 2.3388144633733 33.534937162676 476.30582519551 11024.796689104
+851	1437338 820 1882328 2006402 341 366 26 530.1 1006.4058251955 18926.582137199 14467697.502117
+850	1438158 572 1882328 2006402 341 366 26 520.2 523.4 13531.6 7042488.08
+vector 873 highwayNetwork.node[174].veinsmobility acceleration ETV
+vector 874 highwayNetwork.node[174].veinsmobility co2emission ETV
+676	1438863 2915 1402803 2009597 268 367 100 -2.8197287466267 25.493491454016 835.1215475361 11920.165811747
+675	1441778 3170 1402803 2009597 268 367 100 -4.5 2.5961609554477 27.489309880781 565.33138700254
+672	1444948 3222 1396075 2009597 267 367 101 2.5646663505351 35.295000954228 1962.7226958522 47462.665610082
+671	1448170 2799 1388970 2009597 266 367 102 30.1 1023.4 63571.215321328 49161773.515414
+670	1450969 2785 1388970 2009597 266 367 102 49.637304147801 1023.4 68933.264620784 54541058.987513
+vector 875 highwayNetwork.node[175].veinsmobility posx ETV
+vector 876 highwayNetwork.node[175].veinsmobility posy ETV
+859	1453872 696 1913540 2012525 346 368 23 0.973 24.173595124933 217.14220107066 3160.2553985868
+858	1454568 728 1913540 2012525 346 368 23 -4.5 2.5675787198823 22.753338069062 102.37325054242
+857	1455296 763 1907516 2012525 345 368 24 1.6225255027413 33.375010506227 465.5978582153 11261.334894296
+856	1456059 787 1901498 2012525 344 368 25 530.1 995.6978582153 17666.418943848 13078058.568168
+855	1456846 550 1901498 2012525 344 368 25 520.2 520.2 13005 6765201
+vector 877 highwayNetwork.node[175].veinsmobility speed ETV
+802	1457456 1456 1769510 2015466 322 369 48 0.51907873973384 26.497996756217 386.36468607126 5089.3869531435
+801	1458912 1522 1769510 2015466 322 369 48 -4.5 2.4517234806437 26.079101964558 242.4089746251
+799	1460434 1563 1763482 2015466 321 369 49 1.5672570044873 34.028710782365 966.55004320552 23138.494075817
+796	1461997 1379 1757456 2015466 320 369 50 530.1 1020.2 43457.184536525 39542939.351411
+795	1463376 1323 1757456 2015466 320 369 50 43.129956794476 520.2 21518.559490021 10274813.818211
+vector 878 highwayNetwork.node[175].veinsmobility acceleration ETV
+vector 879 highwayNetwork.node[175].veinsmobility co2emission ETV
+695	1464832 2480 1472595 2018155 278 370 93 307.46910733519 1020.2 68588.162950333 56178074.418179
+696	1467312 2601 1472595 2018155 278 370 93 30.1 1023.4 53287.214776525 38896736.175617
+697	1469913 2935 1479319 2018155 279 370 92 0.88649429309136 36.936948873846 1704.8908926648 40258.971889539
+698	1472848 2783 1486040 2018155 280 370 91 -4.5 2.5654589546146 27.475650992042 635.50125288216
+699	1475631 2654 1486040 2018155 280 370 91 0.973 28.896754183958 815.63424693326 12038.52576827
+720	1478285 2106 1557435 2018155 290 370 81 520.2 1023.4 62882.082094236 53036088.734427
+721	1480391 2303 1557435 2018155 290 370 81 30.1 1017.9767195767 39475.868229502 23683798.600103
+722	1482694 2551 1564922 2018155 291 370 80 1.2053728692781 35.186781892212 1490.5567195767 35769.959770806
+723	1485245 2500 1572408 2018155 292 370 79 -4.5 2.5608990411041 29.646758701539 479.48076647809
+724	1487745 2295 1572408 2018155 292 370 79 0.973 26.880168233323 693.78769713953 10380.785183369
+735	1490040 1886 1623246 2018155 299 370 72 523.4 1020.2 58642.824059805 51267962.229407
+736	1491926 2028 1623246 2018155 299 370 72 30.1 856.84268164962 32466.117144028 17562845.754336
+737	1493954 2269 1629929 2018155 300 370 71 2.4948610020569 35.994702985555 1319.1026816496 31818.073667566
+738	1496223 2193 1635886 2018155 301 370 70 -4.5 2.5921092761913 32.749262931149 456.54902508124
+739	1498416 2054 1635886 2018155 301 370 70 0.973 26.520359440885 662.61155830594 10360.650232139
+752	1500470 1736 1660731 2018155 305 370 66 520.2 1020.2 53981.501648402 47304968.775874
+753	1502206 1849 1660731 2018155 305 370 66 30.1 785.89253654229 28647.080015648 14992239.057146
+755	1504055 2070 1667782 2018155 306 370 65 2.5303236397449 35.202277971269 1253.3125365423 29771.420724557
+758	1506125 1978 1674454 2018155 307 370 64 -4.5 2.5776359527139 29.448452140037 430.72878509639
+759	1508103 1883 1674454 2018155 307 370 64 -0.24287750418232 25.03667041306 601.94592817067 9340.2437590256
+762	1509986 1680 1680768 2018155 308 370 63 523.4 1023.4 53504.360857171 48158948.56309
+763	1511666 1749 1680768 2018155 308 370 63 30.1 632.08166456376 25661.031817261 12635888.221666
+765	1513415 1979 1687481 2018155 309 370 62 1.5191720951814 34.877680215519 1099.5016645638 25045.566181068
+768	1515394 1930 1694191 2018155 310 370 61 -4.5 2.5622541169403 19.242527617276 399.83170353748
+769	1517324 1766 1694191 2018155 310 370 61 0.973 23.882160028764 506.7614273921 6955.0913640543
+780	1519090 1549 1721479 2018155 314 370 57 523.4 1023.4 50051.395245483 46038095.506739
+781	1520639 1572 1721479 2018155 314 370 57 30.1 553.51621249356 22231.828663927 10645457.346607
+782	1522211 1791 1727830 2018155 315 370 56 1.7366817392176 35.042389689266 1020.9362124936 23968.419768935
+783	1524002 1731 1733816 2018155 316 370 55 -4.5 2.5873274868587 9.165443333911 379.14604884693
+784	1525733 1606 1733816 2018155 316 370 55 0.973 23.343729241578 454.11684593413 6525.5102459083
+787	1527339 1472 1739447 2018155 317 370 54 520.2 1020.2 48477.533089066 45206434.221005
+788	1528811 1461 1739447 2018155 317 370 54 30.1 527.13801200935 20614.899269623 9719373.2267321
+790	1530272 1689 1745794 2018155 318 370 53 2.3501299886499 35.777115934414 994.55801200935 23785.089935022
+793	1531961 1646 1751807 2018155 319 370 52 -4.5 2.5792658972554 2.405904162631 366.37217812543
+794	1533607 1472 1751807 2018155 319 370 52 0.973 26.949867159566 445.40341992765 7059.2455047281
+797	1535079 1397 1757456 2018155 320 370 51 536.53686679332 1023.4 47108.492537491 44715783.966854
+798	1536476 1384 1757456 2018155 320 370 51 30.1 523.4 19028.285221427 8938454.4387999
+800	1537860 1595 1763482 2018155 321 370 50 1.428862018371 35.767447801228 978.30313320668 23938.913175741
+803	1539455 1485 1769510 2018155 322 370 49 -4.5 2.5959550986532 11.034516214127 357.77705981876
+804	1540940 1424 1769510 2018155 322 370 49 0.973 25.48802859066 452.49209036143 6962.4454891186
+807	1542364 1289 1775530 2018155 323 370 48 608.56356674886 1020.2 45706.98966545 44170106.237762
+808	1543653 1321 1775530 2018155 323 370 48 30.1 523.4 17314.273093216 7984751.2706594
+810	1544974 1497 1781912 2018155 324 370 47 2.0246837925632 35.222392397499 901.11643325114 21658.881844808
+813	1546471 1466 1788289 2018155 325 370 46 -4.5 2.4578764765291 25.792979771525 271.05649361919
+814	1547937 1359 1788289 2018155 325 370 46 0.973 27.344300856614 432.25933469287 6325.1007765208
+815	1549296 1197 1794672 2018155 326 370 45 646.96179287122 1023.4 43317.127448592 42185365.267902
+816	1550493 1257 1794672 2018155 326 370 45 30.1 523.4 15769.202955512 7233278.377222
+817	1551750 1403 1801026 2018155 327 370 44 1.5851487189764 35.302569894895 867.87820712878 21498.577743423
+818	1553153 1348 1807009 2018155 328 370 43 -4.5 2.5858180667041 29.503760247964 256.08412218509
+819	1554501 1270 1807009 2018155 328 370 43 0.973 23.63815448573 429.54302551305 6359.4833775604
+820	1555771 1101 1812986 2018155 329 370 42 770.60473496894 1020.2 41407.580790448 41003765.287096
+821	1556872 1179 1812986 2018155 329 370 42 30.1 520.2 14345.364639487 6440649.086309
+822	1558051 1309 1818937 2018155 330 370 41 1.7189629532862 34.002840522421 739.07526503106 16693.19238338
+823	1559360 1275 1824885 2018155 331 370 40 -4.5 2.5851486926666 28.684059666343 233.91569700117
+824	1560635 1185 1824885 2018155 331 370 40 0.973 23.699808454835 364.54494410829 5025.4273454849
+825	1561820 1012 1830468 2018155 332 370 39 861.94219591059 1023.4 39077.554409502 39219034.791266
+826	1562832 1125 1830468 2018155 332 370 39 30.1 523.4 12951.910610611 5755918.5946355
+827	1563957 1209 1836066 2018155 333 370 38 2.307191847288 34.919147709408 652.89780408941 14344.800492775
+828	1565166 1158 1841341 2018155 334 370 37 -4.5 2.5592300802236 21.232448232783 221.51848526247
+829	1566324 1091 1841341 2018155 334 370 37 0.973 24.247420362678 312.11500883267 4136.7130153545
+830	1567415 890 1846614 2018155 335 370 36 426.69420865886 523.4 18421.131492405 9444971.7558224
+831	1568305 1069 1846614 2018155 335 370 36 530.1 1023.4 29285.523777797 25179012.876843
+832	1569374 903 1851922 2018155 336 370 35 871.03195739249 1020.2 35008.979033491 35073059.166979
+833	1570277 998 1851922 2018155 336 370 35 30.1 520.2 12023.171936343 5305766.5622789
+834	1571275 1117 1851922 2018155 336 370 35 1.3247789877467 36.112661340646 588.14579134114 13124.299647979
+835	1572392 853 1857568 2018155 337 370 34 932.13838709031 1023.4 34432.826641396 34886823.588182
+836	1573245 1006 1857568 2018155 337 370 34 30.1 523.4 10405.174096253 4433596.9033602
+837	1574251 1071 1857568 2018155 337 370 34 -4.5 2.579960308969 17.529242833242 221.84979337363
+838	1575322 995 1857568 2018155 337 370 34 0.973 24.640866636941 289.65408676897 4240.2449214973
+839	1576317 1088 1857568 2018155 337 370 34 4.5521797035843 35.652598560515 638.64804260751 14253.90787424
+840	1577405 786 1863565 2018155 338 370 33 481.10246508448 520.2 17065.511985309 8827661.7153968
+841	1578191 997 1863565 2018155 338 370 33 530.1 1020.2 26361.335093051 22227284.726412
+842	1579188 1063 1863565 2018155 338 370 33 -4.4765060445701 2.5774602425285 11.839534782459 198.03657965629
+843	1580251 952 1863565 2018155 338 370 33 0.973 26.006483369741 289.39214814914 4256.6713309986
+844	1581203 1055 1863565 2018155 338 370 33 1.9917486250401 35.182189776702 582.70161290969 13050.35126117
+845	1582258 1007 1869946 2018155 339 370 32 -4.5 2.5869756000582 17.083210713654 209.63636085289
+846	1583265 940 1869946 2018155 339 370 32 0.973 27.377623966919 278.64736778941 3813.7921151908
+847	1584205 1019 1869946 2018155 339 370 32 1.980127140996 33.767591405194 528.57753491552 11707.779137359
+848	1585224 975 1876319 2018155 340 370 31 -4.5 2.5839308993891 9.1280169002963 212.87385846775
+849	1586199 908 1876319 2018155 340 370 31 0.973 23.703175096094 239.4674308608 3101.6811350087
+860	1587107 440 1940108 2018155 351 370 20 520.2 520.2 10404 5412160.8
+861	1587547 629 1940108 2018155 351 370 20 530.1 880.14014565106 13075.143500345 8785512.6709245
+862	1588176 607 1945108 2018155 352 370 19 2.0968098412268 34.985760972719 350.04014565106 8302.8246600167
+863	1588783 574 1950104 2018155 353 370 18 1.309731098637 2.4769077109871 32.888951131492 62.137681124989
+864	1589357 574 1950104 2018155 353 370 18 3.2878476102051 26.364979468834 211.76422750627 3204.0199885645
+865	1589931 275 1990791 2018155 362 370 9 948.02366898344 1013.5 8909.5716641122 8824371.87322
+866	1590206 198 1990791 2018155 362 370 9 520.2 520.2 4681.8 2435472.36
+867	1590404 256 1995141 2018155 363 370 8 1.5917950430419 14.833441012283 65.476331016561 699.47964000198
+868	1590660 224 1999197 2018155 364 370 7 1.3005844841478 2.5886428850004 13.241645969241 26.769283517912
+869	1590884 222 1999197 2018155 364 370 7 2.1843454764649 8.2335244649033 41.062534197913 274.83606666633
+870	1591106 183 2002662 2018155 365 370 6 983.67209183131 1013.5 6012.871901868 6026431.0999617
+871	1591289 132 2002662 2018155 365 370 6 520.2 520.2 3121.2 1623648.24
+872	1591421 159 2006402 2018155 366 370 5 1.810334363929 10.341769751697 29.827908168687 223.67088115132
+873	1591580 128 2009597 2018155 367 370 4 1.7939347045496 2.4988208939554 8.5314353877678 18.45439156633
+874	1591708 128 2009597 2018155 367 370 4 3.2127293085636 7.1593189104364 20.682488615731 118.16163189925
+875	1591836 87 2012525 2018155 368 370 3 1008.0640395158 1013.5 3033.4413563575 3067271.0621036
+876	1591923 66 2012525 2018155 368 370 3 520.2 520.2 1560.6 811824.12
+877	1591989 64 2015466 2018155 369 370 2 1.6226831583772 3.8132773257792 5.4359604841564 17.174184595783
+878	1592053 31 2018155 2018155 370 370 1 2.190594167402 2.190594167402 2.190594167402 4.7987028062557
+879	1592084 32 2018155 2018155 370 370 1 3.3122305113916 3.3122305113916 3.3122305113916 10.970870960594
+
